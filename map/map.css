@@ -1,0 +1,36 @@
+#map-container img { max-width: none; }
+#map-container { width: 100%; height: 400px; }
+
+@media only screen and (max-width: 767px) { 
+    #map-container { height: 235px; }
+}
+
+
+.hidden { display: none; }
+
+.map-button {
+
+    display: block;
+    padding: 5px;
+    background: #d9edf7;
+    border: 1px solid #bce8f1;
+    color: #3a87ad;
+    margin: 5px 0;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px white;
+
+}
+.map-button:hover, .map-button:focus {
+
+    background: #b1dce5;
+    text-decoration: none;
+}
+#directions p {
+
+    margin-bottom: 0;
+}
+#from-input {
+    margin: 5px 0;
+    border-radius: 3px;
+    padding: 5px;
+}

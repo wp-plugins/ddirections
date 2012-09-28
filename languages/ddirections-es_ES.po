@@ -1,0 +1,168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ddirections\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-25 17:34+0100\n"
+"PO-Revision-Date: 2012-09-25 17:35+0100\n"
+"Last-Translator: Héctor Garrofé <info@hectorgarrofe.com>\n"
+"Language-Team: Héctor Garrofé <info@hectorgarrofe.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: C:\\svn\\internet\\sites\\production\\wordpress_latest\\trunk\\wp-content\\plugins\\ddirections\n"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:190
+msgid "Fill the fields to configure the plugin."
+msgstr "Rellena los campos para configurar el plugin"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:203
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:357
+msgid "Address"
+msgstr "Dirección"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:203
+msgid "You can use City names or the 41.39, 2.16 format"
+msgstr "Puedes usar nombres de ciudad o el formato de coordenadas 41.39, 2.16"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:211
+msgid "Infobox text"
+msgstr "Texto del cuadro informativo"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:211
+msgid "Accepts some HTML tags"
+msgstr "Acepta algunos tags HTML"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:219
+msgid "Zoom level"
+msgstr "Nivel de Zoom"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:227
+msgid "Map type"
+msgstr "Tipo de Mapa"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:230
+msgid "Hybrid"
+msgstr "Híbrido"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:231
+msgid "Roadmap"
+msgstr "Normal"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:232
+msgid "Satellite"
+msgstr "Satélite"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:233
+msgid "Terrain"
+msgstr "Relieve"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:235
+msgid "The 4 google maps different types"
+msgstr "Los 4 tipos de mapa de google maps"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:241
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:261
+msgid "Settings"
+msgstr "Configuración"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:313
+msgid "Thanks!<br /> You are at <strong> "
+msgstr "¡Gracias!<br /> Estás a <strong>"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:314
+msgid "</strong> from us.<br />The driving directions are below the map."
+msgstr "</strong> de nosotros.<br />Las instrucciones de conducción están bajo el mapa."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:356
+msgid "To start the route enter your initial location:"
+msgstr "Para planificar tu ruta introduce la dirección de origen:"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:359
+msgid "Metric"
+msgstr "Métrica"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:360
+msgid "Imperial"
+msgstr "Imperial"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:362
+msgid "Get the rute"
+msgstr "Obtener indicaciones"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:367
+msgid "Use my location"
+msgstr "Usar mi ubicacion actual"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:9
+msgid "<p>For more information visit the plugin's website: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
+msgstr "<p>Para más información visita la web del plugin: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:13
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:15
+msgid "How to use it?"
+msgstr "¿ Cómo utilizarlo ?"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:16
+msgid "To use driving directions you have to fill the fields below.<br />Once this is done, you can output the data in the front end with 3 different shortcodes."
+msgstr "Para usar las dirreciones de conducción has de rellenar los campos de abajo.<br />Una vez llenos, puedes mostrarlos en la parte pública de la web con 3 shortcodes diferentes."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:18
+msgid "Displays the map showing the chosen location. When the user asks for directions the route is shown in this map too."
+msgstr "Muestra el mapa con la localización escogida. También muestra la ruta en el mapa cuando el usuario pregunta una dirección."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:20
+msgid "Displays the form to interact with the map."
+msgstr "Muestra el formulario para interactuar con el mapa."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:22
+msgid "Displays the driving directions instructions."
+msgstr "Muestra las instrucciones de conducción"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:23
+msgid "In english."
+msgstr "En español."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:29
+msgid "Styling"
+msgstr "Estilar"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:31
+msgid "Styling the form"
+msgstr "Estilar el formulario"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:32
+msgid "You can style the form elements as you want using the classes below:"
+msgstr "Puedes estilar los elementos del formulario utilizando las siguientes clases:"
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:33
+msgid "The <strong>form</strong> is inside a div with <em>#directions</em> id."
+msgstr "El <strong>formulario</strong> está dentro de un div con el id <em>#directions</em>."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:34
+msgid "The <strong>buttons</strong> of the form has the <em>.map-button</em> class."
+msgstr "Los <strong>botones</strong> del formuario tienen la clase <em>.map-button</em>."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:35
+msgid "The <strong>directions</strong> are inside a div with <em>#dir-container</em> id."
+msgstr "Las <strong>direcciones</strong> están dentro de un div con id <em>#dir-container</em>."
+
+#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:36
+msgid "The <strong>map</strong> is inside a div with <em>#map-container</em> id."
+msgstr "El <strong>mapa</strong> está dentro de un div con id <em>#map-container</em>."
+
+#, fuzzy
+#~ msgid "To use driving directions."
+#~ msgstr "Muestra las instrucciones de conducción"
+
+#~ msgid "Add a comment here to explain more about how to use the option above"
+#~ msgstr ""
+#~ "Añade un comentario aquí para explicar más sobre como usar esta opción"
