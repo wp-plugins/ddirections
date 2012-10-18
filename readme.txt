@@ -38,5 +38,5 @@ Yes.
 * Added Spanish translation.
 * Added Catalan transaltion.
 
-= 1.0.0 =
+= 1.0 =
 * Initial release.
