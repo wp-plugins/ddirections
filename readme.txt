@@ -32,5 +32,11 @@ Yes.
 
 == Changelog ==
 
+= 1.1 =
+* Now the plugin is originally written in English.
+* Fixed some translations.
+* Added Spanish translation.
+* Added Catalan transaltion.
+
 = 1.0.0 =
 * Initial release.

@@ -59,14 +59,13 @@ var WPmap = {
         // Check for known errors
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                message = "This website does not have permission to use " +
-                    "the Geolocation API";
+                message = mapa_data.msg_error1;
                 break;
             case error.POSITION_UNAVAILABLE:
-                message = "Sorry, your current position cannot be determined, please enter your address instead.";
+                message = mapa_data.msg_error2;
                 break;
             case error.PERMISSION_DENIED_TIMEOUT:
-                message = "Sorry, we're having trouble trying to determine your current location, please enter your address instead.";
+                message = mapa_data.msg_error3;
                 break;
         }
         // If it's an unknown error, build a message that includes
@@ -75,8 +74,7 @@ var WPmap = {
         if (message == "")
         {
             var strErrorCode = error.code.toString();
-            message = "The position could not be determined due to " +
-                "an unknown error (Code: " + strErrorCode + ").";
+            message = mapa_data.msg_error4_1 + mapa_data.msg_error4_2 + strErrorCode + ").";
         }
        console.log(message);
     },
@@ -101,7 +99,9 @@ var WPmap = {
             + newdest 
             + '&amp;saddr=' 
             + locString
-            + '" class="map-button">Abrir en Google Maps</a>');
+			+ '" class="map-button">'
+			+ mapa_data.msg_open_in_google_maps
+			+ '</a>');
     },
 
     /* Determine whether an Admin has entered lat/lon values or a regular address. */
@@ -214,11 +214,11 @@ var WPmap = {
     showDirections:function (dirResult, dirStatus) {
         if (dirStatus != google.maps.DirectionsStatus.OK) {
             switch (dirStatus){
-                case "ZERO_RESULTS" : alert ('Sorry, we can\'t provide directions to that address (you maybe too far away, are you in the same country as us?) Please try again.')
+                case "ZERO_RESULTS" : alert(mapa_data.msg_sorry1)
                     break;
-                case "NOT_FOUND" : alert('Sorry we didn\'t understand the address you entered - Please try again.');
+                case "NOT_FOUND" : alert(mapa_data.msg_sorry2);
                     break;
-                default : alert('Sorry, there was a problem generating the directions. Please try again.')
+                default : alert(mapa_data.msg_sorry3)
             }
             return;
         }

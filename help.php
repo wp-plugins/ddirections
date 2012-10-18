@@ -19,8 +19,7 @@ function help_ddirections() {
 			<strong>[wpmap_directions_input]</strong>
 			<p>'.__('Displays the form to interact with the map.','ddirections').'</p>
 			<strong>[wpmap_directions_container]</strong>
-			<p>'.__('Displays the driving directions instructions.','ddirections').'</p>
-			<p>'.__('In english.','ddirections').'</p>'
+			<p>'.__('Displays the driving directions instructions.','ddirections').'</p>'
 	));
 
 

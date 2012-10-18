@@ -3,11 +3,13 @@
 Plugin Name: DDirections
 Plugin URI: http://www.hectorgarrofe.com
 Description: Driving directions with geolocation and mobile support.
-Version: 1.0
+Version: 1.1
 Author: Hector Garrofe
 Author URI: http://www.hectorgarrofe.com
 */
 
+
+// localize the plugin
 function ddirections_lang_init() {
   load_plugin_textdomain( 'ddirections', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/'); 
 }
@@ -198,7 +200,7 @@ function posk_render_form() {
 			<!-- Each Plugin Option Defined on a New Table Row -->
 			<table class="form-table">
 			
-				<!-- Coordenadas -->
+				<!-- Coordinates -->
 				<tr>
 					<th scope="row"><?php _e('Address','ddirections'); ?><br /><small> <?php _e('You can use City names or the 41.39, 2.16 format','ddirections'); ?></small></th>
 					<td>
@@ -214,7 +216,7 @@ function posk_render_form() {
 					</td>
 				</tr>
 
-				<!-- Nivel de Zoom -->
+				<!-- Zoom level -->
 				<tr>
 					<th scope="row"><?php _e('Zoom level','ddirections'); ?></th>
 					<td>
@@ -265,31 +267,16 @@ function posk_plugin_action_links( $links, $file ) {
 
 	return $links;
 }
-
-// ------------------------------------------------------------------------------
-// SAMPLE USAGE FUNCTIONS:
-// ------------------------------------------------------------------------------
-// THE FOLLOWING FUNCTIONS SAMPLE USAGE OF THE PLUGINS OPTIONS DEFINED ABOVE. TRY
-// CHANGING THE DROPDOWN SELECT BOX VALUE AND SAVING THE CHANGES. THEN REFRESH
-// A PAGE ON YOUR SITE TO SEE THE UPDATED VALUE.
-// ------------------------------------------------------------------------------
-
-
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-
 add_action('admin_init', 'map_init');
 
 function wpmap_map($atts, $content = null){
 
-    /** Styles **/
+    // Styles
     wp_register_style('wptuts-style', plugins_url( '/map/map.css', __FILE__ ), array(), '20120208', 'all' );  
 
     wp_enqueue_style ('wptuts-style');
 	
-    /** Scripts **/
+    // Scripts
     wp_register_script('google-maps', 'http://maps.google.com/maps/api/js?sensor=false');
     wp_enqueue_script('google-maps');
 
@@ -309,9 +296,18 @@ function wpmap_map($atts, $content = null){
     if(empty($initial_map_type)) $initial_map_type = $options['initial_map_type'];
     if(empty($infobox_text)) $infobox_text = $options['infobox_text'];
 	
-	//set message variable for the final infobox
+	// set message variables to translate the JS
 	$msg_ok1 = __('Thanks!<br /> You are at <strong> ','ddirections');
 	$msg_ok2 = __('</strong> from us.<br />The driving directions are below the map.','ddirections');
+	$msg_open_in_google_maps = __('Open in Google Maps','ddirections');
+	$msg_sorry1 = __('Sorry, we can\'t provide directions to that address (you maybe too far away, are you in the same country as us?) Please try again.','ddirections');
+	$msg_sorry2 = __('Sorry we didn\'t understand the address you entered. Please try again.','ddirections');
+	$msg_sorry3 = __('Sorry, there was a problem generating the directions. Please try again.','ddirections');
+	$msg_error1 = __('This website does not have permission to use the Geolocation API.','ddirections');
+	$msg_error2 = __('Sorry, your current position cannot be determined, please enter your address instead.','ddirections');
+	$msg_error3 = __('Sorry, we\'re having trouble trying to determine your current location, please enter your address instead.','ddirections');
+	$msg_error4_1 = __('The position could not be determined due to','ddirections');
+	$msg_error4_2 = __('an unknown error (Code: ','ddirections');
 	
 	// select which variables share between php and javascript
 	$variables_mapa = array(
@@ -319,31 +315,38 @@ function wpmap_map($atts, $content = null){
 		'zoom' => $zoom,
 		'initial_map_type' => $initial_map_type,
 		'msg_ok1' => $msg_ok1,
-		'msg_ok2' => $msg_ok2
+		'msg_ok2' => $msg_ok2,
+		'msg_open_in_google_maps' => $msg_open_in_google_maps,
+		'msg_sorry1' => $msg_sorry1,
+		'msg_sorry2' => $msg_sorry2,
+		'msg_sorry3' => $msg_sorry3,
+		'msg_error1' => $msg_error1,
+		'msg_error2' => $msg_error2,
+		'msg_error3' => $msg_error3,
+		'msg_error4_1' => $msg_error4_1,
+		'msg_error4_2' => $msg_error4_2
     );
 
-	//send viariable to javascript
+	// send viariable to javascript
 	wp_localize_script( 'wptuts-custom', 'mapa_data', $variables_mapa );
 	
     $output = sprintf(('<div id="map-container" data-map-infowindow="%s" data-map-zoom="%s"></div>'), $infobox_text, $zoom);
     return $output;
 
 }
+
 // [wpmap_map zoom="12" infobox_text="default" initial_map_type="ROADMAP"]
 // [wpmap_map] without arguments, it uses the default zoo, infobox_text and initial_map_type defined in the Settings Form
 add_shortcode('wpmap_map', 'wpmap_map');
 
 function wpmap_directions_container($atts, $content = null){
-
     $output = '<div id="dir-container" ></div>';
     return $output;
-
 }
 // [wpmap_directions_container]
 add_shortcode('wpmap_directions_container', 'wpmap_directions_container');
 
 function wpmap_directions_input($atts, $content = null){
-
    // loading options
     extract(shortcode_atts(array(
 		'coordinates' => ''
@@ -371,10 +374,11 @@ function wpmap_directions_input($atts, $content = null){
                ';
     return $output;
 }
+
 // [wpmap_directions_input coordinates="41.39, 2.16"]
 // [wpmap_directions_input] without arguments, it uses the default coordinates defined in the Settings Form
 add_shortcode('wpmap_directions_input', 'wpmap_directions_input');
 
-//ayuda
+// help
 include 'help.php';
 ?>
