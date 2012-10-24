@@ -166,6 +166,7 @@ var WPmap = {
         marker = new google.maps.Marker({
             map:WPmap.map,
             position:WPmap.destination,
+			icon: mapa_data.icon_url,
             draggable:false
         });
 

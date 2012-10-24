@@ -95,7 +95,8 @@ function posk_add_defaults() {
 		$arr = array(	'coordinates' => '41.39, 2.16',
 						'infobox_text' => 'default',
 						'zoom' => '12',
-						'initial_map_type' => 'ROADMAP'
+						'initial_map_type' => 'ROADMAP',
+						'icon_url' => ''
 		);
 		update_option('posk_options', $arr);
 	}
@@ -238,6 +239,14 @@ function posk_render_form() {
 					</td>
 				</tr>
 				
+				<!-- Image URL -->
+				<tr>
+					<th scope="row"><?php _e('Icon Marker URL','ddirections'); ?></th>
+					<td>
+						<input type="text" size="50" name="posk_options[icon_url]" value="<?php echo $options['icon_url']; ?>" />
+					</td>
+				</tr>
+				
 			</table>
 			<p class="submit">
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes','ddirections'); ?>" />
@@ -295,6 +304,7 @@ function wpmap_map($atts, $content = null){
     if(empty($zoom)) $zoom = $options['zoom'];
     if(empty($initial_map_type)) $initial_map_type = $options['initial_map_type'];
     if(empty($infobox_text)) $infobox_text = $options['infobox_text'];
+	if(empty($icon_url)) $icon_url = $options['icon_url'];
 	
 	// set message variables to translate the JS
 	$msg_ok1 = __('Thanks!<br /> You are at <strong> ','ddirections');
@@ -314,6 +324,7 @@ function wpmap_map($atts, $content = null){
 		'infobox_text' => $infobox_text,
 		'zoom' => $zoom,
 		'initial_map_type' => $initial_map_type,
+		'icon_url' => $icon_url,
 		'msg_ok1' => $msg_ok1,
 		'msg_ok2' => $msg_ok2,
 		'msg_open_in_google_maps' => $msg_open_in_google_maps,
