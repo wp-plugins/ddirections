@@ -3,7 +3,7 @@ Contributors: hectorgarrofe
 Tags: driving, directions, google, maps
 Requires at least: 3.3
 Tested up to: 3.3
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,11 +32,14 @@ Yes.
 
 == Changelog ==
 
+= 1.2 =
+* Added the option to choose a custom icon marker image.
+
 = 1.1 =
 * Now the plugin is originally written in English.
 * Fixed some translations.
 * Added Spanish translation.
-* Added Catalan transaltion.
+* Added Catalan translation.
 
 = 1.0 =
 * Initial release.
