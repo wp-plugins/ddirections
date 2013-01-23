@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 Plugin Name: DDirections
 Plugin URI: http://www.hectorgarrofe.com
@@ -376,7 +376,7 @@ function wpmap_directions_input($atts, $content = null){
                   <br />
                   <input id="map-config-address" type="hidden" value="'.$coordinates.'"/>
                  <div id="geo-directions" class="hidden">
-                 <p>Tambien puedes...</p>
+                 <p>'.__('You can also...','ddirections').'</p>
                   <a href="#" onclick="WPmap.getDirections(\'geo\'); return false" class="map-button">'.__('Use my location','ddirections').'</a>
                   <span id="native-link"></span>
                  </div>
