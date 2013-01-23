@@ -276,7 +276,6 @@ function posk_plugin_action_links( $links, $file ) {
 
 	return $links;
 }
-add_action('admin_init', 'map_init');
 
 function wpmap_map($atts, $content = null){
 
