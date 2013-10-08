@@ -7,11 +7,11 @@ Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows to set a direction and then display a Google maps whith the address and driving directions.
+This plugin allows to set a direction and then display a Google map with the address and driving directions.
 
 == Description ==
 
-This plugin allows to set a direction and then display a Google maps whith the address and driving directions. Uses HTML5 Geolocation (in supported browsers) and integrates with native map applications for iOS and Android.
+This plugin allows to set a direction and then display a Google maps with the address and driving directions. Uses HTML5 Geolocation (in supported browsers) and integrates with native map applications for iOS and Android.
 
 
 == Installation ==
@@ -29,6 +29,12 @@ Completetly free.
 = Really? =
 
 Yes.
+
+= The plugin doesn't work, the map is not diplayed =
+
+Make sure to read the plugin's documentation on the HELP tab. Upper right on the plugin's page.
+
+The plugin need you to use all the shortcodes to work properly.
 
 == Changelog ==
 
