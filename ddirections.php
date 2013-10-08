@@ -21,11 +21,7 @@ Para poner imagenes en el plugin:
 */
 
 // ------------------------------------------------------------------------
-// REQUIRE MINIMUM VERSION OF WORDPRESS:                                               
-// ------------------------------------------------------------------------
-// THIS IS USEFUL IF YOU REQUIRE A MINIMUM VERSION OF WORDPRESS TO RUN YOUR
-// PLUGIN. IN THIS PLUGIN THE WP_EDITOR() FUNCTION REQUIRES WORDPRESS 3.3 
-// OR ABOVE. ANYTHING LESS SHOWS A WARNING AND THE PLUGIN IS DEACTIVATED.                    
+// REQUIRE MINIMUM VERSION OF WORDPRESS:                                                           
 // ------------------------------------------------------------------------
 function requires_wordpress_version() {
 	global $wp_version;
@@ -40,16 +36,6 @@ function requires_wordpress_version() {
 	}
 }
 add_action( 'admin_init', 'requires_wordpress_version' );
-
-// ------------------------------------------------------------------------
-// PLUGIN PREFIX:
-// ------------------------------------------------------------------------
-// A PREFIX IS USED TO AVOID CONFLICTS WITH EXISTING PLUGIN FUNCTION NAMES.
-// WHEN CREATING A NEW PLUGIN, CHANGE THE PREFIX AND USE YOUR TEXT EDITORS 
-// SEARCH/REPLACE FUNCTION TO RENAME THEM ALL QUICKLY.
-// ------------------------------------------------------------------------
-
-// 'posk_' prefix is derived from [p]plugin [o]ptions [s]tarter [k]it
 
 // ------------------------------------------------------------------------
 // REGISTER HOOKS & CALLBACK FUNCTIONS:
@@ -351,16 +337,12 @@ function wpmap_map($atts, $content = null){
     return $output;
 
 }
-
-// [wpmap_map zoom="12" infobox_text="default" initial_map_type="ROADMAP"]
-// [wpmap_map] without arguments, it uses the default zoo, infobox_text and initial_map_type defined in the Settings Form
 add_shortcode('wpmap_map', 'wpmap_map');
 
 function wpmap_directions_container($atts, $content = null){
     $output = '<div id="dir-container" ></div>';
     return $output;
 }
-// [wpmap_directions_container]
 add_shortcode('wpmap_directions_container', 'wpmap_directions_container');
 
 function wpmap_directions_input($atts, $content = null){
@@ -411,19 +393,14 @@ function load_scroll(){
 		//
 	}
 }
-
 add_action('wp_footer', 'load_scroll');
 
-// [wpmap_directions_input coordinates="41.39, 2.16"]
-// [wpmap_directions_input] without arguments, it uses the default coordinates defined in the Settings Form
 add_shortcode('wpmap_directions_input', 'wpmap_directions_input');
 
 // help
 include 'help.php';
 
-// add 3.5 media uploader behavior to the Upload Button
-add_action('admin_enqueue_scripts', 'my_admin_scripts');
- 
+// add 3.5 media uploader behavior to the Upload Button 
 function my_admin_scripts() {
     if (isset($_GET['page']) && $_GET['page'] == 'ddirections') {
         wp_enqueue_media();
@@ -435,4 +412,5 @@ function my_admin_scripts() {
         wp_enqueue_script('custom-js');
     }
 }
+add_action('admin_enqueue_scripts', 'my_admin_scripts');
 ?>
