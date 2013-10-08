@@ -24,7 +24,7 @@ This plugin allows to set a direction and then display a Google maps with the ad
 
 = Is the plugin free? =
 
-Completetly free.
+Completely free.
 
 = Really? =
 
