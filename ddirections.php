@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Plugin Name: DDirections
 Plugin URI: http://www.hectorgarrofe.com
@@ -42,7 +42,7 @@ function requires_wordpress_version() {
 add_action( 'admin_init', 'requires_wordpress_version' );
 
 // ------------------------------------------------------------------------
-// PLUGIN PREFIX:                                                          
+// PLUGIN PREFIX:
 // ------------------------------------------------------------------------
 // A PREFIX IS USED TO AVOID CONFLICTS WITH EXISTING PLUGIN FUNCTION NAMES.
 // WHEN CREATING A NEW PLUGIN, CHANGE THE PREFIX AND USE YOUR TEXT EDITORS 
@@ -89,6 +89,7 @@ function posk_delete_plugin_options() {
 
 // Define default option settings
 function posk_add_defaults() {
+	/*
 	$tmp = get_option('posk_options');
     if(($tmp['chk_default_options_db']=='1')||(!is_array($tmp))) {
 		delete_option('posk_options'); // so we don't have to reset all the 'off' checkboxes too! (don't think this is needed but leave for now)
@@ -100,6 +101,7 @@ function posk_add_defaults() {
 		);
 		update_option('posk_options', $arr);
 	}
+	*/
 }
 
 // ------------------------------------------------------------------------------
@@ -124,7 +126,7 @@ function posk_init(){
 
 // Add menu page
 function posk_add_options_page() {
-	add_options_page('Driving directions', 'Driving directions', 'manage_options', __FILE__, 'posk_render_form');
+	add_options_page('Driving Directions', 'Driving Directions', 'manage_options', 'ddirections', 'posk_render_form');
 }
 
 // ------------------------------------------------------------------------------
@@ -140,8 +142,9 @@ function posk_render_form() {
 	?>
 	
 	<style>
-	#wpwrap{
-		background: url('<?php echo plugins_url(); ?>/ddirections/images/map-bg.png') no-repeat bottom right;
+	#configuration-form{
+		width: 60%;
+		float: left;
 	}
 	
 	.wrap small{
@@ -155,27 +158,6 @@ function posk_render_form() {
 		margin-top: 20px;
 	}
 	
-	#infobox textarea{
-		border: none;
-		position: absolute;
-		top: 0;
-		resize: none;
-		width: 300px;
-		padding: 10px;
-		background: transparent;
-		margin-left: 1px;
-		height: 87px;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	
-	#infobox td{
-        position: relative;
-		background: url('<?php echo plugins_url(); ?>/ddirections/images/infobox.png') no-repeat 10px -1px;
-		height: 200px;		
-	}
-	
 	hr{
 		border-bottom: 1px;
 	}
@@ -183,17 +165,21 @@ function posk_render_form() {
 	#contextual-help-columns{
 		background: url('<?php echo plugins_url(); ?>/ddirections/images/hg_logo.png') no-repeat bottom right;
 	}
-	</style>
 	
+	#map-canvas{
+		width: 35%;
+		height: 300px;
+		float: left;
+	}
+	</style>
 	<div class="wrap">
-		
 		<!-- Display Plugin Icon, Header, and Description -->
 		<div class="icon32" id="icon-options-general"><br></div>
 		<h2>Driving Directions</h2>
 		<!--<p><?php _e('Fill the fields to configure the plugin.','ddirections'); ?></p>-->
 
 		<!-- Beginning of the Plugin Options Form -->
-		<form method="post" action="options.php">
+		<form id="configuration-form" method="post" action="options.php">
 			<?php settings_fields('posk_plugin_options'); ?>
 			<?php $options = get_option('posk_options'); ?>
 
@@ -203,9 +189,9 @@ function posk_render_form() {
 			
 				<!-- Coordinates -->
 				<tr>
-					<th scope="row"><?php _e('Address','ddirections'); ?><br /><small> <?php _e('You can use City names or the 41.39, 2.16 format','ddirections'); ?></small></th>
+					<th scope="row"><?php _e('Address','ddirections'); ?><br /><small> <?php _e('City names or the 41.39, 2.16 format','ddirections'); ?></small></th>
 					<td>
-						<input type="text" size="53" name="posk_options[coordinates]" value="<?php echo $options['coordinates']; ?>" />
+						<input id="coordinates" type="text" size="53" name="posk_options[coordinates]" value="<?php echo $options['coordinates']; ?>" />
 					</td>
 				</tr>
 
@@ -213,7 +199,7 @@ function posk_render_form() {
 				<tr id="infobox">
 					<th scope="row"><?php _e('Infobox text','ddirections'); ?><br /><small><?php _e('Accepts some HTML tags','ddirections'); ?></small></th>
 					<td>
-						<textarea name="posk_options[infobox_text]" rows="3" cols="59" type='textarea'><?php echo $options['infobox_text']; ?></textarea>
+						<textarea id="infobox_text" name="posk_options[infobox_text]" rows="3" cols="59" type='textarea'><?php echo $options['infobox_text']; ?></textarea>
 					</td>
 				</tr>
 
@@ -221,7 +207,7 @@ function posk_render_form() {
 				<tr>
 					<th scope="row"><?php _e('Zoom level','ddirections'); ?></th>
 					<td>
-						<input type="text" size="20" name="posk_options[zoom]" value="<?php echo $options['zoom']; ?>" />
+						<input id="zoom_level" type="text" size="20" name="posk_options[zoom]" value="<?php echo $options['zoom']; ?>" />
 					</td>
 				</tr>
 
@@ -229,7 +215,7 @@ function posk_render_form() {
 				<tr>
 					<th scope="row"><?php _e('Map type','ddirections'); ?></th>
 					<td>
-						<select name='posk_options[initial_map_type]'>
+						<select id="map_type" name='posk_options[initial_map_type]'>
 							<option value='HYBRID' <?php selected('HYBRYD', $options['initial_map_type']); ?>><?php _e('Hybrid','ddirections'); ?></option>
 							<option value='ROADMAP' <?php selected('ROADMAP', $options['initial_map_type']); ?>><?php _e('Roadmap','ddirections'); ?></option>
 							<option value='SATELLITE' <?php selected('SATELLITE', $options['initial_map_type']); ?>><?php _e('Satellite','ddirections'); ?></option>
@@ -239,11 +225,31 @@ function posk_render_form() {
 					</td>
 				</tr>
 				
-				<!-- Image URL -->
+				<!-- Icon Marker -->
 				<tr>
-					<th scope="row"><?php _e('Icon Marker URL','ddirections'); ?></th>
+					<th scope="row"><?php _e('Icon marker','ddirections'); ?></th>
 					<td>
-						<input type="text" size="50" name="posk_options[icon_url]" value="<?php echo $options['icon_url']; ?>" />
+						<label for="upload_image">
+							<input id="upload_image" type="text" size="36" name="posk_options[icon_url]" value="<?php echo $options['icon_url']; ?>" /> 
+							<input id="upload_image_button" class="button" type="button" value="Upload Image" />
+							<br /><span style="color:#666666;">Enter a URL or upload an image</span>
+						</label>
+					</td>
+				</tr>
+
+				<!-- Scroll on instruction click -->
+				<tr>
+					<th scope="row"><?php _e('Scroll on instruction click?','ddirections'); ?></th>
+					<td>
+						<?php
+						if ($options['scrolltop']=='yes'){
+							echo '<input type="radio" name="posk_options[scrolltop]" value="yes" checked>Yes&nbsp;&nbsp;';
+							echo '<input type="radio" name="posk_options[scrolltop]" value="no"> No';
+						} else {
+							echo '<input type="radio" name="posk_options[scrolltop]" value="yes"> Yes&nbsp;&nbsp;';
+							echo '<input type="radio" name="posk_options[scrolltop]" value="no" checked> No';
+						}
+						?>
 					</td>
 				</tr>
 				
@@ -251,7 +257,9 @@ function posk_render_form() {
 			<p class="submit">
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes','ddirections'); ?>" />
 			</p>
+			
 		</form>
+		<div id="map-canvas"></div>
 
 	</div>
 	<?php	
@@ -279,10 +287,9 @@ function posk_plugin_action_links( $links, $file ) {
 
 function wpmap_map($atts, $content = null){
 
-    // Styles
-    wp_register_style('wptuts-style', plugins_url( '/map/map.css', __FILE__ ), array(), '20120208', 'all' );  
-
-    wp_enqueue_style ('wptuts-style');
+	// Styles
+	wp_register_style('wptuts-style', plugins_url( '/map/map.css', __FILE__ ), array(), '20120208', 'all' );  
+	wp_enqueue_style ('wptuts-style');
 	
     // Scripts
     wp_register_script('google-maps', 'http://maps.google.com/maps/api/js?sensor=false');
@@ -299,11 +306,11 @@ function wpmap_map($atts, $content = null){
 		), $atts));
 
 	$options = get_option('posk_options');    
-    if(empty($controls)) $controls = $options['controls'];
     if(empty($zoom)) $zoom = $options['zoom'];
     if(empty($initial_map_type)) $initial_map_type = $options['initial_map_type'];
     if(empty($infobox_text)) $infobox_text = $options['infobox_text'];
 	if(empty($icon_url)) $icon_url = $options['icon_url'];
+	if(empty($scrolltop)) $scrolltop = $options['scrolltop'];
 	
 	// set message variables to translate the JS
 	$msg_ok1 = __('Thanks!<br /> You are at <strong> ','ddirections');
@@ -375,8 +382,8 @@ function wpmap_directions_input($atts, $content = null){
                   <a href="#" onclick="WPmap.getDirections(\'manual\'); return false" class="map-button">'.__('Get the rute','ddirections').'</a>
                   <br />
                   <input id="map-config-address" type="hidden" value="'.$coordinates.'"/>
-                 <div id="geo-directions" class="hidden">
-                 <p>'.__('You can also...','ddirections').'</p>
+                 <div id="geo-directions">
+                 <p>Tambien puedes...</p>
                   <a href="#" onclick="WPmap.getDirections(\'geo\'); return false" class="map-button">'.__('Use my location','ddirections').'</a>
                   <span id="native-link"></span>
                  </div>
@@ -385,10 +392,47 @@ function wpmap_directions_input($atts, $content = null){
     return $output;
 }
 
+function load_scroll(){
+	$options = get_option('posk_options');
+	if($options['scrolltop']=='yes'){
+		echo '
+			<script>
+			$(document).ready(function() {
+				$("body").on("click", ".adp-directions tr",function(event){
+					$("html, body").animate({ scrollTop: $("#map-container").offset().top -70}, 800);
+				});
+			});
+			</script>
+			';
+	} else if($options['scrolltop']=='no'){
+		//
+	}
+	else{
+		//
+	}
+}
+
+add_action('wp_footer', 'load_scroll');
+
 // [wpmap_directions_input coordinates="41.39, 2.16"]
 // [wpmap_directions_input] without arguments, it uses the default coordinates defined in the Settings Form
 add_shortcode('wpmap_directions_input', 'wpmap_directions_input');
 
 // help
 include 'help.php';
+
+// add 3.5 media uploader behavior to the Upload Button
+add_action('admin_enqueue_scripts', 'my_admin_scripts');
+ 
+function my_admin_scripts() {
+    if (isset($_GET['page']) && $_GET['page'] == 'ddirections') {
+        wp_enqueue_media();
+		
+		wp_register_script('admin_google_maps', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false');
+        wp_enqueue_script('admin_google_maps');
+		
+        wp_register_script('custom-js', WP_PLUGIN_URL.'/ddirections/js/custom.js', array('jquery','admin_google_maps'));
+        wp_enqueue_script('custom-js');
+    }
+}
 ?>

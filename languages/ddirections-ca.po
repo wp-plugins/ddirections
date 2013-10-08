@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ddirections\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-09 13:30+0100\n"
+"PO-Revision-Date: 2013-04-09 13:30+0100\n"
+"Last-Translator: Héctor Garrofé <info@hectorgarrofe.com>\n"
+"Language-Team: Héctor Garrofé <info@hectorgarrofe.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: C:\\svn\\internet\\sites\\production\\campingdelmar.com\\trunk\\wp-content\\plugins\\ddirections\n"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:193
+msgid "Fill the fields to configure the plugin."
+msgstr "Omple el camps per configurar el plugin"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:206
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:373
+msgid "Address"
+msgstr "Direcció"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:206
+msgid "You can use City names or the 41.39, 2.16 format"
+msgstr "Pots utilitzar noms de ciutats o el format de corrdenades 41.39, 2.16"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:214
+msgid "Infobox text"
+msgstr "Text del quadre informatiu"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:214
+msgid "Accepts some HTML tags"
+msgstr "Accepta alguns tags HTML"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:222
+msgid "Zoom level"
+msgstr "Nivell de Zoom"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:230
+msgid "Map type"
+msgstr "Tipus de Mapa"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:233
+msgid "Hybrid"
+msgstr "Híbrid"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:234
+msgid "Roadmap"
+msgstr "Normal"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:235
+msgid "Satellite"
+msgstr "Satel·lit"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:236
+msgid "Terrain"
+msgstr "Terreny"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:238
+msgid "The 4 google maps different types"
+msgstr "Els 4 tipus diferents de mapa de Google Maps"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:244
+msgid "Icon Marker URL"
+msgstr "URL del l'icona marcador"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:252
+msgid "Save Changes"
+msgstr "Guardar canvis"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:272
+msgid "Settings"
+msgstr "Configuració"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:309
+msgid "Thanks!<br /> You are at <strong> "
+msgstr "Gràcies!<br /> Estas a <strong> "
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:310
+msgid "</strong> from us.<br />The driving directions are below the map."
+msgstr "</strong> de nosaltres.<br />Les direccions de conducció estàn sota el mapa."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:311
+msgid "Open in Google Maps"
+msgstr "Obrir a Google Maps"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:312
+msgid "Sorry, we can't provide directions to that address (you maybe too far away, are you in the same country as us?) Please try again."
+msgstr "Ho sentim, no podem donar-te direccions des d'aquesta adreça (potser estàs massa lluny, estàs al mateix pais que nosaltres?) Si us plau, torna-ho a intentar."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:313
+msgid "Sorry we didn't understand the address you entered. Please try again."
+msgstr "Ho sentim, no podem entendre la direcció que has introduït. Si us plau, torna a intentar-ho."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:314
+msgid "Sorry, there was a problem generating the directions. Please try again."
+msgstr "Ho sentim, hi ha hagut un problema generant les direccions. Si us plau, torna a intentar-ho."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:315
+msgid "This website does not have permission to use the Geolocation API."
+msgstr "Aquesta pàgina web no te permís per fer servir l'API de Geolocalització."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:316
+msgid "Sorry, your current position cannot be determined, please enter your address instead."
+msgstr "Ho sentim, no podem determinar la teva ubicació actual, escriu la teva adreça manualment."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:317
+msgid "Sorry, we're having trouble trying to determine your current location, please enter your address instead."
+msgstr "Ho sentim, tenim problemes per determinar la teva localització. Si us plau, escriu la teva adreça."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:318
+msgid "The position could not be determined due to"
+msgstr "No podem determinar la teva posició degut"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:319
+msgid "an unknown error (Code: "
+msgstr "a un error desconegut (Còdi:"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:372
+msgid "To start the route enter your initial location:"
+msgstr "Per començar la ruta introdueïx la teva posició inicial:"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:375
+msgid "Metric"
+msgstr "Métrica"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:376
+msgid "Imperial"
+msgstr "Imperial"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:378
+msgid "Get the rute"
+msgstr "Obtenir indicacions"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:379
+msgid "Use my location"
+msgstr "Utilitzar la meva ubicació actual"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:409
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:432
+msgid "Enter your address:"
+msgstr "Introdueix la teva adreça:"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:411
+msgid "Title"
+msgstr "Títol"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:411
+msgid "Enter the title for requesting an address"
+msgstr "Introdueix el títol per demanar una adreça"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:412
+msgid "Page ID"
+msgstr "Identificador de pàgina/Slug/Nom"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:412
+msgid "Enter the page ID of the page you are showing the Driving Directions"
+msgstr "Introdueix l'identificador de pàgina on estàs mostrant Driving Directions"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/ddirections.php:449
+msgid "Take me to the place"
+msgstr "Porta'm fins aquí"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:9
+msgid "<p>For more information visit the plugin's website: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
+msgstr "<p>Per més informació visita la web del plugin: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:13
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:15
+msgid "How to use it?"
+msgstr "Com utilizar-lo ?"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:16
+msgid "To use driving directions you have to fill the fields below.<br />Once this is done, you can output the data in the front end with 3 different shortcodes."
+msgstr "Per fer servir les \"driving directions\" has d'omplir els següents camps amb les dades corresponents.<br />n\t\t\tUn cop omplert pots utilitzar 3 shortcodes diferents per mostrar la informació de localització."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:18
+msgid "Displays the map showing the chosen location. When the user asks for directions the route is shown in this map too."
+msgstr "Mostra el mapa amb localització escollida. També mostra la ruta al mapa quan l'usuari dona una direcció."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:20
+msgid "Displays the form to interact with the map."
+msgstr "Mostra el formulari per interactuar amb el mapa."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:22
+msgid "Displays the driving directions instructions."
+msgstr "Mostra les instruccions de conducció."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:28
+msgid "Styling"
+msgstr "Estilar"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:30
+msgid "Styling the form"
+msgstr "Estilar el formulari"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:31
+msgid "You can style the form elements as you want using the classes below:"
+msgstr "Pots estilar els elements del formulari utilitzant les seguents classes:"
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:32
+msgid "The <strong>form</strong> is inside a div with <em>#directions</em> id."
+msgstr "El <strong>formulari</strong> està dins d'un div amb l'id <em>#directions</em>."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:33
+msgid "The <strong>buttons</strong> of the form has the <em>.map-button</em> class."
+msgstr "Els <strong>botons</strong> del formuari tenen la classe <em>.map-button</em>."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:34
+msgid "The <strong>directions</strong> are inside a div with <em>#dir-container</em> id."
+msgstr "Les <strong>direccions</strong> estan dins d'un div amb id <em>#dir-container</em>."
+
+#: C:\svn\internet\sites\production\campingdelmar.com\trunk\wp-content\plugins\ddirections/help.php:35
+msgid "The <strong>map</strong> is inside a div with <em>#map-container</em> id."
+msgstr "El <strong>mapa</strong> está dins d'un div amb id <em>#map-container</em>."
+
+#~ msgid "Add a comment here to explain more about how to use the option above"
+#~ msgstr ""
+#~ "Añade un comentario aquí para explicar más sobre como usar esta opción"

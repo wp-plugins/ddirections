@@ -1,7 +1,7 @@
 <?php
 
 function help_ddirections() {
-	$id_direcciones = 'settings_page_ddirections/ddirections';
+	$id_direcciones = 'settings_page_ddirections';
 	$screen = get_current_screen();
 	if($screen->id != $id_direcciones)
 		return;
@@ -14,6 +14,7 @@ function help_ddirections() {
 		'content' => '
 			<h2>'.__('How to use it?','ddirections').'</h2>
 			<p>'.__('To use driving directions you have to fill the fields below.<br />Once this is done, you can output the data in the front end with 3 different shortcodes.','ddirections').'</p>
+			<p><strong>'.__('Note that all shortcodes are required. You must use all of them on the same page or the plugin doesn\'t work.','ddirections').'</strong></p>
 			<strong>[wpmap_map]</strong>
 			<p>'.__('Displays the map showing the chosen location. When the user asks for directions the route is shown in this map too.','ddirections').'</p>
 			<strong>[wpmap_directions_input]</strong>

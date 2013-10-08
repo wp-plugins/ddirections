@@ -2,8 +2,8 @@
 Contributors: hectorgarrofe
 Tags: driving, directions, google, maps
 Requires at least: 3.3
-Tested up to: 3.5
-Stable tag: 1.2.1
+Tested up to: 3.7 Beta1
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,10 @@ Completetly free.
 Yes.
 
 == Changelog ==
+
+= 1.3 =
+* Now you can upload your marker image in the admin panel. No need to write the image url and upload it manually.
+* Added "scroll to top" feature in the directions view.
 
 = 1.2.1 =
 * Fixed error - Calling to undefined function. Thanks to @davidnavo.

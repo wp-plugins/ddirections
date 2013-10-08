@@ -44,11 +44,11 @@ var WPmap = {
      * Set extra buttons for users with Geo Capabilities
      */
     setGeoCoords : function (position){
-
+    
         WPmap.geoLat = position.coords.latitude;
         WPmap.geoLon = position.coords.longitude;
-        WPmap.showGeoButton();
-        WPmap.setNativeMapLink();
+        WPmap.getDirections('geo');        
+
     },
 
     /**
@@ -76,32 +76,43 @@ var WPmap = {
             var strErrorCode = error.code.toString();
             message = mapa_data.msg_error4_1 + mapa_data.msg_error4_2 + strErrorCode + ").";
         }
-       console.log(message);
-    },
-
-    /**
-     * Show the 'use current location' button
-     */
-    showGeoButton : function(){
-
-        var geoContainer = document.getElementById('geo-directions');
-        geoContainer.removeClass('hidden');
+        
+        /*
+          WPmap.setNativeMapLink('hide');
+        */
+        
+        console.log(message);
     },
 
     /*  Show the 'open in google maps' button */
-    setNativeMapLink: function(){
+    setNativeMapLink: function(request){
 
-        var locString   = WPmap.geoLat + ',' + WPmap.geoLon;
+        /*
+         if(request == 'hide') {
+            WPmap.nativeLinkElem.innerHTML = ('');
+            return;
+        }
+        */
+
+        
+        var locString   = '';
+        if(request == 'manual') {
+            locString = WPmap.fromInput.value;
+        }
+        else if(request == 'geo') {
+            locString  = WPmap.geoLat + ',' + WPmap.geoLon;
+        }
+            
         var destination = WPmap.toInput.value;
         var newdest     = destination.replace(' ', '');
-        WPmap.nativeLinkElem.innerHTML = ('<a href="http://maps.google.com/maps?mrsp=0' 
+        WPmap.nativeLinkElem.innerHTML = ('<a target="_blank" href="http://maps.google.com/maps?mrsp=0' 
             + '&amp;daddr='
             + newdest 
             + '&amp;saddr=' 
             + locString
-			+ '" class="map-button">'
-			+ mapa_data.msg_open_in_google_maps
-			+ '</a>');
+            + '" class="map-button">'
+            + mapa_data.msg_open_in_google_maps
+            + '</a>');
     },
 
     /* Determine whether an Admin has entered lat/lon values or a regular address. */
@@ -132,8 +143,6 @@ var WPmap = {
         //get the content
         var infoWindowContent = WPmap.mapContainer.getAttribute('data-map-infowindow');
 
-
-
 		if(mapa_data.initial_map_type == 'SATELLITE'){
 			WPmap.map = new google.maps.Map(WPmap.mapContainer, {
 				zoom:parseInt(mapa_data.zoom),     //ensure it comes through as an Integer
@@ -159,7 +168,7 @@ var WPmap = {
 				mapTypeId:google.maps.MapTypeId.TERRAIN // style of map: HYBRID, ROADMAP, SATELLITE, TERRAIN
 			});
 		} else {
-			alert('EROOR');
+			alert('Not supported MAP TYPE');
 		}
 
 
@@ -201,18 +210,30 @@ var WPmap = {
         };
 
         //check if user clicked 'use current location'
-        if (request == 'geo'){
-            var geoLatLng = new google.maps.LatLng( WPmap.geoLat , WPmap.geoLon );
-            dirRequest.origin = geoLatLng;
+        if (request == 'geo')
+        {
+            if (typeof(WPmap.geoLoc) == 'undefined')
+            {
+                if (WPmap.geoLoc = WPmap.getGeo()) WPmap.getGeoCoords();
+                return;                
+            }
+            else
+            {
+                var geoLatLng = new google.maps.LatLng( WPmap.geoLat , WPmap.geoLon );
+                dirRequest.origin = geoLatLng;
+            }
         }
 
-        WPmap.dirService.route(dirRequest, WPmap.showDirections);
+        if (request == 'geo')
+            WPmap.dirService.route(dirRequest, WPmap.showDirectionsGeo);
+        else
+            WPmap.dirService.route(dirRequest, WPmap.showDirectionsManual);
     },
 
     /**
      * Output the Directions into the page.
      */
-    showDirections:function (dirResult, dirStatus) {
+    showDirectionsManual:function (dirResult, dirStatus) {
         if (dirStatus != google.maps.DirectionsStatus.OK) {
             switch (dirStatus){
                 case "ZERO_RESULTS" : alert(mapa_data.msg_sorry1)
@@ -220,23 +241,50 @@ var WPmap = {
                 case "NOT_FOUND" : alert(mapa_data.msg_sorry2);
                     break;
                 default : alert(mapa_data.msg_sorry3)
+                
             }
+            
+            /*
+            WPmap.setNativeMapLink('hide');
+            */
             return;
         }
         // Show directions
         WPmap.dirRenderer.setMap(WPmap.map);
         WPmap.dirRenderer.setPanel(WPmap.dirContainer);
         WPmap.dirRenderer.setDirections(dirResult);
+        
+        WPmap.setNativeMapLink('manual');
     },
+    
+    showDirectionsGeo:function (dirResult, dirStatus) {
+        if (dirStatus != google.maps.DirectionsStatus.OK) {
+            switch (dirStatus){
+                case "ZERO_RESULTS" : alert(mapa_data.msg_sorry1)
+                    break;
+                case "NOT_FOUND" : alert(mapa_data.msg_sorry2);
+                    break;
+                default : alert(mapa_data.msg_sorry3)
+                
+            }
+            
+            /*
+            WPmap.setNativeMapLink('hide');            
+            */
+            return;
+        }
+        // Show directions
+        WPmap.dirRenderer.setMap(WPmap.map);
+        WPmap.dirRenderer.setPanel(WPmap.dirContainer);
+        WPmap.dirRenderer.setDirections(dirResult);
+        
+        WPmap.setNativeMapLink('geo');
+    },
+    
 
     init:function () {
-
-        if (WPmap.geoLoc = WPmap.getGeo()){
-            //things to do if the browser supports GeoLocation.
-            WPmap.getGeoCoords();
-        }
-
-        WPmap.getDestination();
+        
+         WPmap.getDestination();
 
         //listen for when Directions are requested
         google.maps.event.addListener(WPmap.dirRenderer, 'directions_changed', function () {
@@ -257,6 +305,13 @@ var WPmap = {
             }, 8000); //close it after 8 seconds.
 
         });
+
+        if(mapa_data.ddirections_widget_address != null)
+        {
+            WPmap.fromInput.value = mapa_data.ddirections_widget_address;
+            WPmap.getDirections('manual');        
+        }
+        
     }//init
 };
 
