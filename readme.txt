@@ -3,7 +3,7 @@ Contributors: hectorgarrofe
 Tags: driving, directions, google, maps
 Requires at least: 3.3
 Tested up to: 3.7 Beta1
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Make sure to read the plugin's documentation on the HELP tab. Upper right on the
 The plugin need you to use all the shortcodes to work properly.
 
 == Changelog ==
+
+= 1.4 =
+* Added new Widget. You have to use the shortcodes on the landing page to get DDirections working.
 
 = 1.3 =
 * Now you can upload your marker image in the admin panel. No need to write the image url and upload it manually.

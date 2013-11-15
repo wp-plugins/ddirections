@@ -3,7 +3,7 @@
 Plugin Name: DDirections
 Plugin URI: http://www.hectorgarrofe.com
 Description: Driving directions with geolocation and mobile support.
-Version: 1.3
+Version: 1.4
 Author: Hector Garrofe
 Author URI: http://www.hectorgarrofe.com
 */
@@ -21,7 +21,11 @@ Para poner imagenes en el plugin:
 */
 
 // ------------------------------------------------------------------------
-// REQUIRE MINIMUM VERSION OF WORDPRESS:                                                           
+// REQUIRE MINIMUM VERSION OF WORDPRESS:                                               
+// ------------------------------------------------------------------------
+// THIS IS USEFUL IF YOU REQUIRE A MINIMUM VERSION OF WORDPRESS TO RUN YOUR
+// PLUGIN. IN THIS PLUGIN THE WP_EDITOR() FUNCTION REQUIRES WORDPRESS 3.3 
+// OR ABOVE. ANYTHING LESS SHOWS A WARNING AND THE PLUGIN IS DEACTIVATED.                    
 // ------------------------------------------------------------------------
 function requires_wordpress_version() {
 	global $wp_version;
@@ -36,6 +40,16 @@ function requires_wordpress_version() {
 	}
 }
 add_action( 'admin_init', 'requires_wordpress_version' );
+
+// ------------------------------------------------------------------------
+// PLUGIN PREFIX:
+// ------------------------------------------------------------------------
+// A PREFIX IS USED TO AVOID CONFLICTS WITH EXISTING PLUGIN FUNCTION NAMES.
+// WHEN CREATING A NEW PLUGIN, CHANGE THE PREFIX AND USE YOUR TEXT EDITORS 
+// SEARCH/REPLACE FUNCTION TO RENAME THEM ALL QUICKLY.
+// ------------------------------------------------------------------------
+
+// 'posk_' prefix is derived from [p]plugin [o]ptions [s]tarter [k]it
 
 // ------------------------------------------------------------------------
 // REGISTER HOOKS & CALLBACK FUNCTIONS:
@@ -75,7 +89,6 @@ function posk_delete_plugin_options() {
 
 // Define default option settings
 function posk_add_defaults() {
-	/*
 	$tmp = get_option('posk_options');
     if(($tmp['chk_default_options_db']=='1')||(!is_array($tmp))) {
 		delete_option('posk_options'); // so we don't have to reset all the 'off' checkboxes too! (don't think this is needed but leave for now)
@@ -87,7 +100,6 @@ function posk_add_defaults() {
 		);
 		update_option('posk_options', $arr);
 	}
-	*/
 }
 
 // ------------------------------------------------------------------------------
@@ -131,6 +143,8 @@ function posk_render_form() {
 	#configuration-form{
 		width: 60%;
 		float: left;
+
+
 	}
 	
 	.wrap small{
@@ -144,6 +158,27 @@ function posk_render_form() {
 		margin-top: 20px;
 	}
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	hr{
 		border-bottom: 1px;
 	}
@@ -158,7 +193,9 @@ function posk_render_form() {
 		float: left;
 	}
 	</style>
+
 	<div class="wrap">
+
 		<!-- Display Plugin Icon, Header, and Description -->
 		<div class="icon32" id="icon-options-general"><br></div>
 		<h2>Driving Directions</h2>
@@ -224,6 +261,7 @@ function posk_render_form() {
 				</tr>
 
 				<!-- Scroll on instruction click -->
+
 				<tr>
 					<th scope="row"><?php _e('Scroll on instruction click?','ddirections'); ?></th>
 					<td>
@@ -236,6 +274,7 @@ function posk_render_form() {
 							echo '<input type="radio" name="posk_options[scrolltop]" value="no" checked> No';
 						}
 						?>
+
 					</td>
 				</tr>
 				
@@ -275,6 +314,7 @@ function wpmap_map($atts, $content = null){
 
 	// Styles
 	wp_register_style('wptuts-style', plugins_url( '/map/map.css', __FILE__ ), array(), '20120208', 'all' );  
+
 	wp_enqueue_style ('wptuts-style');
 	
     // Scripts
@@ -292,6 +332,7 @@ function wpmap_map($atts, $content = null){
 		), $atts));
 
 	$options = get_option('posk_options');    
+	if(empty($controls)) $controls = $options['controls'];
     if(empty($zoom)) $zoom = $options['zoom'];
     if(empty($initial_map_type)) $initial_map_type = $options['initial_map_type'];
     if(empty($infobox_text)) $infobox_text = $options['infobox_text'];
@@ -327,7 +368,9 @@ function wpmap_map($atts, $content = null){
 		'msg_error2' => $msg_error2,
 		'msg_error3' => $msg_error3,
 		'msg_error4_1' => $msg_error4_1,
-		'msg_error4_2' => $msg_error4_2
+		'msg_error4_2' => $msg_error4_2,
+		'ddirections_widget_address' => $_REQUEST['ddirections_widget_address']
+
     );
 
 	// send viariable to javascript
@@ -337,12 +380,16 @@ function wpmap_map($atts, $content = null){
     return $output;
 
 }
+
+// [wpmap_map zoom="12" infobox_text="default" initial_map_type="ROADMAP"]
+// [wpmap_map] without arguments, it uses the default zoo, infobox_text and initial_map_type defined in the Settings Form
 add_shortcode('wpmap_map', 'wpmap_map');
 
 function wpmap_directions_container($atts, $content = null){
     $output = '<div id="dir-container" ></div>';
     return $output;
 }
+// [wpmap_directions_container]
 add_shortcode('wpmap_directions_container', 'wpmap_directions_container');
 
 function wpmap_directions_input($atts, $content = null){
@@ -352,7 +399,9 @@ function wpmap_directions_input($atts, $content = null){
 		), $atts));
 
 	$options = get_option('posk_options');
+
     if(empty($coordinates)) $coordinates = $options['coordinates'];
+
 
     $output = '<div id="directions">
                   <p>'.__('To start the route enter your initial location:','ddirections').'</p>
@@ -367,8 +416,11 @@ function wpmap_directions_input($atts, $content = null){
                  <div id="geo-directions">
                  <p>Tambien puedes...</p>
                   <a href="#" onclick="WPmap.getDirections(\'geo\'); return false" class="map-button">'.__('Use my location','ddirections').'</a>
+
                   <span id="native-link"></span>
                  </div>
+
+
                </div>
                ';
     return $output;
@@ -393,14 +445,19 @@ function load_scroll(){
 		//
 	}
 }
+
 add_action('wp_footer', 'load_scroll');
 
+// [wpmap_directions_input coordinates="41.39, 2.16"]
+// [wpmap_directions_input] without arguments, it uses the default coordinates defined in the Settings Form
 add_shortcode('wpmap_directions_input', 'wpmap_directions_input');
 
 // help
 include 'help.php';
 
-// add 3.5 media uploader behavior to the Upload Button 
+// add 3.5 media uploader behavior to the Upload Button
+add_action('admin_enqueue_scripts', 'my_admin_scripts');
+ 
 function my_admin_scripts() {
     if (isset($_GET['page']) && $_GET['page'] == 'ddirections') {
         wp_enqueue_media();
@@ -411,6 +468,69 @@ function my_admin_scripts() {
         wp_register_script('custom-js', WP_PLUGIN_URL.'/ddirections/js/custom.js', array('jquery','admin_google_maps'));
         wp_enqueue_script('custom-js');
     }
+
 }
-add_action('admin_enqueue_scripts', 'my_admin_scripts');
+
+// WIDGET
+class DDirectionsWidget extends WP_Widget{
+  
+  function DDirectionsWidget(){
+    $widget_ops = array('classname' => 'DDirectionsWidget', 'description' => 'Displays the DDirections widget' );
+    $this->WP_Widget('DDirectionsWidget', 'Driving Directions', $widget_ops);
+  }
+
+
+  function form($instance){
+    $instance = wp_parse_args( (array) $instance, array( 'page_id' => '' ), array( 'title' => '' ) );
+    $page_id = $instance['page_id'];
+    $title = $instance['title'];
+    
+    if(empty($title)) $title = __('Enter your address:','ddirections');
+?>
+  <p><label for="<?php echo $this->get_field_id('title'); ?>"><?=__('Title','ddirections')?>:<br /><small><?=__('Enter the title for requesting an address','ddirections')?></small><input class="widefat" id="<?php echo $this->get_field_id('page_id'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo attribute_escape($title); ?>" /></label></p>
+  <p><label for="<?php echo $this->get_field_id('page_id'); ?>"><?=__('Page ID','ddirections')?><br /><small><?=__('Enter the page ID of the page you are showing the Driving Directions','ddirections')?></small><input class="widefat" id="<?php echo $this->get_field_id('page_id'); ?>" name="<?php echo $this->get_field_name('page_id'); ?>" type="text" value="<?php echo attribute_escape($page_id); ?>" /></label></p>
+<?php
+  }
+ 
+  function update($new_instance, $old_instance){
+    $instance = $old_instance;
+    $instance['page_id'] = $new_instance['page_id'];
+    $instance['title'] = $new_instance['title'];
+    return $instance;
+  }
+ 
+  function widget($args, $instance){
+    extract($args, EXTR_SKIP);
+ 
+    echo $before_widget;
+    
+    
+    $page_id = $instance['page_id'];
+    $title = $instance['title'];
+    
+    if(empty($title)) $title = __('Enter your address:','ddirections');    
+    
+    $page_id = empty($page_id) ? ' ' : apply_filters('widget_title', $page_id);
+    $title = empty($title) ? ' ' : apply_filters('widget_title', $title);    
+ 
+    echo $before_title . $title . $after_title;
+	
+    // WIDGET CODE GOES HERE
+    //echo "<h1>The widget appears here!</h1>";
+	$directions_page_url = get_permalink($page_id);
+    if(empty($directions_page_url))
+        $directions_page_url = get_permalink(get_page_by_path($page_id));    
+    if(empty($directions_page_url))
+        $directions_page_url = get_permalink(get_page_by_title($page_id));
+	
+    echo '<form method="post" action="'.$directions_page_url.'">';
+	echo '<input type="text" id="ddirections_widget_address" name="ddirections_widget_address" value="'.$_REQUEST['ddirections_widget_address'].'"></input>';
+	echo '<input type="submit" value="Valldaro"/>';
+    echo '</form>';
+    
+	echo $after_widget;
+  }
+ 
+}
+add_action( 'widgets_init', create_function('', 'return register_widget("DDirectionsWidget");') );
 ?>

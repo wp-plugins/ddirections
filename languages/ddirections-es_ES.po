@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddirections\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-24 17:21+0100\n"
-"PO-Revision-Date: 2013-02-15 13:08+0100\n"
+"POT-Creation-Date: 2013-10-11 15:35+0100\n"
+"PO-Revision-Date: 2013-10-11 15:37+0100\n"
 "Last-Translator: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "Language-Team: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "MIME-Version: 1.0\n"
@@ -15,259 +15,215 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-SearchPath-0: C:\\svn\\internet\\sites\\production\\wordpress_latest"
-"\\trunk\\wp-content\\plugins\\ddirections\n"
+"X-Poedit-SearchPath-0: ..\n"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:193
+#: ../ddirections.php:165
 msgid "Fill the fields to configure the plugin."
 msgstr "Rellena los campos para configurar el plugin"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:206
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:371
+#: ../ddirections.php:178
+#: ../ddirections.php:359
 msgid "Address"
 msgstr "Dirección"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:206
-msgid "You can use City names or the 41.39, 2.16 format"
+#: ../ddirections.php:178
+#, fuzzy
+msgid "City names or the 41.39, 2.16 format"
 msgstr "Puedes usar nombres de ciudad o el formato de coordenadas 41.39, 2.16"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:214
+#: ../ddirections.php:186
 msgid "Infobox text"
 msgstr "Texto del cuadro informativo"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:214
+#: ../ddirections.php:186
 msgid "Accepts some HTML tags"
 msgstr "Acepta algunos tags HTML"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:222
+#: ../ddirections.php:194
 msgid "Zoom level"
 msgstr "Nivel de Zoom"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:230
+#: ../ddirections.php:202
 msgid "Map type"
 msgstr "Tipo de Mapa"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:233
+#: ../ddirections.php:205
 msgid "Hybrid"
 msgstr "Híbrido"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:234
+#: ../ddirections.php:206
 msgid "Roadmap"
 msgstr "Normal"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:235
+#: ../ddirections.php:207
 msgid "Satellite"
 msgstr "Satélite"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:236
+#: ../ddirections.php:208
 msgid "Terrain"
 msgstr "Relieve"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:238
+#: ../ddirections.php:210
 msgid "The 4 google maps different types"
 msgstr "Los 4 tipos de mapa de google maps"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:244
-msgid "Icon Marker URL"
+#: ../ddirections.php:216
+#, fuzzy
+msgid "Icon marker"
 msgstr "URL del icono marcador"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:252
+#: ../ddirections.php:228
+msgid "Scroll on instruction click?"
+msgstr "Hacer scroll al hacer click sobre una instrucción"
+
+#: ../ddirections.php:244
 msgid "Save Changes"
 msgstr "Guardar cambios"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:272
+#: ../ddirections.php:266
 msgid "Settings"
 msgstr "Configuración"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:310
+#: ../ddirections.php:302
 msgid "Thanks!<br /> You are at <strong> "
 msgstr "¡Gracias!<br /> Estás a <strong>"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:311
+#: ../ddirections.php:303
 msgid "</strong> from us.<br />The driving directions are below the map."
-msgstr ""
-"</strong> de nosotros.<br />Las instrucciones de conducción están bajo el "
-"mapa."
+msgstr "</strong> de nosotros.<br />Las instrucciones de conducción están bajo el mapa."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:312
+#: ../ddirections.php:304
 msgid "Open in Google Maps"
 msgstr "Abrir en Google Maps"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:313
-msgid ""
-"Sorry, we can't provide directions to that address (you maybe too far away, "
-"are you in the same country as us?) Please try again."
-msgstr ""
-"Lo sentimos, no podemos proporcionar direcciones para esta dirección (puede "
-"ser que estés demasiado lejos, ¿estás en el mismo país que nosotros?). Por "
-"favor, intentalo más tarde."
+#: ../ddirections.php:305
+msgid "Sorry, we can't provide directions to that address (you maybe too far away, are you in the same country as us?) Please try again."
+msgstr "Lo sentimos, no podemos proporcionar direcciones para esta dirección (puede ser que estés demasiado lejos, ¿estás en el mismo país que nosotros?). Por favor, intentalo más tarde."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:314
+#: ../ddirections.php:306
 msgid "Sorry we didn't understand the address you entered. Please try again."
-msgstr ""
-"Lo sentimos, no entendemos la dirección introducida. Por favor, vuelve a "
-"intentarlo."
+msgstr "Lo sentimos, no entendemos la dirección introducida. Por favor, vuelve a intentarlo."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:315
+#: ../ddirections.php:307
 msgid "Sorry, there was a problem generating the directions. Please try again."
-msgstr ""
-"Lo sentimos, ha ocurrido un error generando las direcciones. Por favor, "
-"vuelve a intentarlo."
+msgstr "Lo sentimos, ha ocurrido un error generando las direcciones. Por favor, vuelve a intentarlo."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:316
+#: ../ddirections.php:308
 msgid "This website does not have permission to use the Geolocation API."
-msgstr ""
-"Esta página web no tiene permisos para utilizar la API de Geolocalización"
+msgstr "Esta página web no tiene permisos para utilizar la API de Geolocalización"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:317
-msgid ""
-"Sorry, your current position cannot be determined, please enter your address "
-"instead."
-msgstr ""
-"Lo sentimos, no se puede determinar tu posición actual. Por favor, introduce "
-"tu dirección."
+#: ../ddirections.php:309
+msgid "Sorry, your current position cannot be determined, please enter your address instead."
+msgstr "Lo sentimos, no se puede determinar tu posición actual. Por favor, introduce tu dirección."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:318
-msgid ""
-"Sorry, we're having trouble trying to determine your current location, "
-"please enter your address instead."
-msgstr ""
-"Lo sentimos, tenemos problemas para determinar tu posición actual. Por favor "
-"Introduce tu dirección."
+#: ../ddirections.php:310
+msgid "Sorry, we're having trouble trying to determine your current location, please enter your address instead."
+msgstr "Lo sentimos, tenemos problemas para determinar tu posición actual. Por favor Introduce tu dirección."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:319
+#: ../ddirections.php:311
 msgid "The position could not be determined due to"
 msgstr "No se puede determinar la posición a causa"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:320
+#: ../ddirections.php:312
 msgid "an unknown error (Code: "
 msgstr "de un error desconocido (Código:"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:370
+#: ../ddirections.php:358
 msgid "To start the route enter your initial location:"
 msgstr "Para planificar tu ruta introduce la dirección de origen:"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:373
+#: ../ddirections.php:361
 msgid "Metric"
 msgstr "Métrica"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:374
+#: ../ddirections.php:362
 msgid "Imperial"
 msgstr "Imperial"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:376
+#: ../ddirections.php:364
 msgid "Get the rute"
 msgstr "Obtener indicaciones"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:381
+#: ../ddirections.php:369
 msgid "Use my location"
 msgstr "Usar mi ubicacion actual"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:411
-msgid "Title"
-msgstr "Título"
+#: ../help.php:9
+msgid "<p>For more information visit the plugin's website: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
+msgstr "<p>Para más información visita la web del plugin: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:411
-msgid "Enter the title for requesting an address"
-msgstr "Introduce el título para pedir que introduzcan una dirección"
-
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:412
-msgid "Page ID"
-msgstr "Id. de página/Slug/Nombre"
-
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:449
-msgid "Take me to the place"
-msgstr "Llévame hasta aquí"
-
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:412
-msgid "Enter the page ID of the page you are showing the Driving Directions"
-msgstr ""
-"Introduce el identificador de la pággina donde estás mostrando Driving "
-"Directions"
-
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/ddirections.php:436
-msgid "Enter your address:"
-msgstr "Introduce tu dirección:"
-
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:9
-msgid ""
-"<p>For more information visit the plugin's website: <a href=\"http://www."
-"hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
-msgstr ""
-"<p>Para más información visita la web del plugin: <a href=\"http://www."
-"hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
-
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:13
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:15
+#: ../help.php:13
+#: ../help.php:15
 msgid "How to use it?"
 msgstr "¿ Cómo utilizarlo ?"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:16
-msgid ""
-"To use driving directions you have to fill the fields below.<br />Once this "
-"is done, you can output the data in the front end with 3 different "
-"shortcodes."
-msgstr ""
-"Para usar las dirreciones de conducción has de rellenar los campos de abajo."
-"<br />Una vez llenos, puedes mostrarlos en la parte pública de la web con 3 "
-"shortcodes diferentes."
+#: ../help.php:16
+msgid "To use driving directions you have to fill the fields below.<br />Once this is done, you can output the data in the front end with 3 different shortcodes."
+msgstr "Para usar las dirreciones de conducción has de rellenar los campos de abajo.<br />Una vez llenos, puedes mostrarlos en la parte pública de la web con 3 shortcodes diferentes."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:18
-msgid ""
-"Displays the map showing the chosen location. When the user asks for "
-"directions the route is shown in this map too."
-msgstr ""
-"Muestra el mapa con la localización escogida. También muestra la ruta en el "
-"mapa cuando el usuario pregunta una dirección."
+#: ../help.php:17
+msgid "Note that all shortcodes are required. You must use all of them on the same page or the plugin doesn't work."
+msgstr "Nótese que todos los shortcodes son requeridos. Se han de utilizar todos en la misma página o el plugin no funcionará. "
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:20
+#: ../help.php:19
+msgid "Displays the map showing the chosen location. When the user asks for directions the route is shown in this map too."
+msgstr "Muestra el mapa con la localización escogida. También muestra la ruta en el mapa cuando el usuario pregunta una dirección."
+
+#: ../help.php:21
 msgid "Displays the form to interact with the map."
 msgstr "Muestra el formulario para interactuar con el mapa."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:22
+#: ../help.php:23
 msgid "Displays the driving directions instructions."
 msgstr "Muestra las instrucciones de conducción"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:28
+#: ../help.php:29
 msgid "Styling"
 msgstr "Estilar"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:30
+#: ../help.php:31
 msgid "Styling the form"
 msgstr "Estilar el formulario"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:31
+#: ../help.php:32
 msgid "You can style the form elements as you want using the classes below:"
-msgstr ""
-"Puedes estilar los elementos del formulario utilizando las siguientes clases:"
+msgstr "Puedes estilar los elementos del formulario utilizando las siguientes clases:"
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:32
+#: ../help.php:33
 msgid "The <strong>form</strong> is inside a div with <em>#directions</em> id."
-msgstr ""
-"El <strong>formulario</strong> está dentro de un div con el id "
-"<em>#directions</em>."
+msgstr "El <strong>formulario</strong> está dentro de un div con el id <em>#directions</em>."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:33
-msgid ""
-"The <strong>buttons</strong> of the form has the <em>.map-button</em> class."
-msgstr ""
-"Los <strong>botones</strong> del formuario tienen la clase <em>.map-button</"
-"em>."
+#: ../help.php:34
+msgid "The <strong>buttons</strong> of the form has the <em>.map-button</em> class."
+msgstr "Los <strong>botones</strong> del formuario tienen la clase <em>.map-button</em>."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:34
-msgid ""
-"The <strong>directions</strong> are inside a div with <em>#dir-container</"
-"em> id."
-msgstr ""
-"Las <strong>direcciones</strong> están dentro de un div con id <em>#dir-"
-"container</em>."
+#: ../help.php:35
+msgid "The <strong>directions</strong> are inside a div with <em>#dir-container</em> id."
+msgstr "Las <strong>direcciones</strong> están dentro de un div con id <em>#dir-container</em>."
 
-#: C:\svn\internet\sites\production\wordpress_latest\trunk\wp-content\plugins\ddirections/help.php:35
-msgid ""
-"The <strong>map</strong> is inside a div with <em>#map-container</em> id."
-msgstr ""
-"El <strong>mapa</strong> está dentro de un div con id <em>#map-container</"
-"em>."
+#: ../help.php:36
+msgid "The <strong>map</strong> is inside a div with <em>#map-container</em> id."
+msgstr "El <strong>mapa</strong> está dentro de un div con id <em>#map-container</em>."
+
+#~ msgid "Title"
+#~ msgstr "Título"
+
+#~ msgid "Enter the title for requesting an address"
+#~ msgstr "Introduce el título para pedir que introduzcan una dirección"
+
+#~ msgid "Page ID"
+#~ msgstr "Id. de página/Slug/Nombre"
+
+#~ msgid "Take me to the place"
+#~ msgstr "Llévame hasta aquí"
+
+#~ msgid "Enter the page ID of the page you are showing the Driving Directions"
+#~ msgstr ""
+#~ "Introduce el identificador de la pággina donde estás mostrando Driving "
+#~ "Directions"
+
+#~ msgid "Enter your address:"
+#~ msgstr "Introduce tu dirección:"
 
 #~ msgid "In english."
 #~ msgstr "En español."
