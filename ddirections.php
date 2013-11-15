@@ -525,7 +525,7 @@ class DDirectionsWidget extends WP_Widget{
 	
     echo '<form method="post" action="'.$directions_page_url.'">';
 	echo '<input type="text" id="ddirections_widget_address" name="ddirections_widget_address" value="'.$_REQUEST['ddirections_widget_address'].'"></input>';
-	echo '<input type="submit" value="Valldaro"/>';
+	echo '<input type="submit" value="Get directions"/>';
     echo '</form>';
     
 	echo $after_widget;
