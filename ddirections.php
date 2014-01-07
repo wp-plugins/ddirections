@@ -410,11 +410,11 @@ function wpmap_directions_input($atts, $content = null){
                       <option value="metric" selected="selected">'.__('Metric','ddirections').'</option>
                       <option value="imperial">'.__('Imperial','ddirections').'</option>
                   </select>
-                  <a href="#" onclick="WPmap.getDirections(\'manual\'); return false" class="map-button">'.__('Get the rute','ddirections').'</a>
+                  <a href="#" onclick="WPmap.getDirections(\'manual\'); return false" class="map-button">'.__('Get the route','ddirections').'</a>
                   <br />
                   <input id="map-config-address" type="hidden" value="'.$coordinates.'"/>
                  <div id="geo-directions">
-                 <p>Tambien puedes...</p>
+                 <p>'.__('You can also...','ddirections').'</p>
                   <a href="#" onclick="WPmap.getDirections(\'geo\'); return false" class="map-button">'.__('Use my location','ddirections').'</a>
 
                   <span id="native-link"></span>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddirections\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-11 15:35+0100\n"
-"PO-Revision-Date: 2013-10-11 15:37+0100\n"
+"POT-Creation-Date: 2014-01-07 10:11+0100\n"
+"PO-Revision-Date: 2014-01-07 10:12+0100\n"
 "Last-Translator: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "Language-Team: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,136 +17,162 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../ddirections.php:165
+#: ../ddirections.php:202
 msgid "Fill the fields to configure the plugin."
 msgstr "Rellena los campos para configurar el plugin"
 
-#: ../ddirections.php:178
-#: ../ddirections.php:359
+#: ../ddirections.php:215
+#: ../ddirections.php:408
 msgid "Address"
 msgstr "Dirección"
 
-#: ../ddirections.php:178
+#: ../ddirections.php:215
 #, fuzzy
 msgid "City names or the 41.39, 2.16 format"
 msgstr "Puedes usar nombres de ciudad o el formato de coordenadas 41.39, 2.16"
 
-#: ../ddirections.php:186
+#: ../ddirections.php:223
 msgid "Infobox text"
 msgstr "Texto del cuadro informativo"
 
-#: ../ddirections.php:186
+#: ../ddirections.php:223
 msgid "Accepts some HTML tags"
 msgstr "Acepta algunos tags HTML"
 
-#: ../ddirections.php:194
+#: ../ddirections.php:231
 msgid "Zoom level"
 msgstr "Nivel de Zoom"
 
-#: ../ddirections.php:202
+#: ../ddirections.php:239
 msgid "Map type"
 msgstr "Tipo de Mapa"
 
-#: ../ddirections.php:205
+#: ../ddirections.php:242
 msgid "Hybrid"
 msgstr "Híbrido"
 
-#: ../ddirections.php:206
+#: ../ddirections.php:243
 msgid "Roadmap"
 msgstr "Normal"
 
-#: ../ddirections.php:207
+#: ../ddirections.php:244
 msgid "Satellite"
 msgstr "Satélite"
 
-#: ../ddirections.php:208
+#: ../ddirections.php:245
 msgid "Terrain"
 msgstr "Relieve"
 
-#: ../ddirections.php:210
+#: ../ddirections.php:247
 msgid "The 4 google maps different types"
 msgstr "Los 4 tipos de mapa de google maps"
 
-#: ../ddirections.php:216
+#: ../ddirections.php:253
 #, fuzzy
 msgid "Icon marker"
 msgstr "URL del icono marcador"
 
-#: ../ddirections.php:228
+#: ../ddirections.php:266
 msgid "Scroll on instruction click?"
 msgstr "Hacer scroll al hacer click sobre una instrucción"
 
-#: ../ddirections.php:244
+#: ../ddirections.php:283
 msgid "Save Changes"
 msgstr "Guardar cambios"
 
-#: ../ddirections.php:266
+#: ../ddirections.php:305
 msgid "Settings"
 msgstr "Configuración"
 
-#: ../ddirections.php:302
+#: ../ddirections.php:343
 msgid "Thanks!<br /> You are at <strong> "
 msgstr "¡Gracias!<br /> Estás a <strong>"
 
-#: ../ddirections.php:303
+#: ../ddirections.php:344
 msgid "</strong> from us.<br />The driving directions are below the map."
 msgstr "</strong> de nosotros.<br />Las instrucciones de conducción están bajo el mapa."
 
-#: ../ddirections.php:304
+#: ../ddirections.php:345
 msgid "Open in Google Maps"
 msgstr "Abrir en Google Maps"
 
-#: ../ddirections.php:305
+#: ../ddirections.php:346
 msgid "Sorry, we can't provide directions to that address (you maybe too far away, are you in the same country as us?) Please try again."
 msgstr "Lo sentimos, no podemos proporcionar direcciones para esta dirección (puede ser que estés demasiado lejos, ¿estás en el mismo país que nosotros?). Por favor, intentalo más tarde."
 
-#: ../ddirections.php:306
+#: ../ddirections.php:347
 msgid "Sorry we didn't understand the address you entered. Please try again."
 msgstr "Lo sentimos, no entendemos la dirección introducida. Por favor, vuelve a intentarlo."
 
-#: ../ddirections.php:307
+#: ../ddirections.php:348
 msgid "Sorry, there was a problem generating the directions. Please try again."
 msgstr "Lo sentimos, ha ocurrido un error generando las direcciones. Por favor, vuelve a intentarlo."
 
-#: ../ddirections.php:308
+#: ../ddirections.php:349
 msgid "This website does not have permission to use the Geolocation API."
 msgstr "Esta página web no tiene permisos para utilizar la API de Geolocalización"
 
-#: ../ddirections.php:309
+#: ../ddirections.php:350
 msgid "Sorry, your current position cannot be determined, please enter your address instead."
 msgstr "Lo sentimos, no se puede determinar tu posición actual. Por favor, introduce tu dirección."
 
-#: ../ddirections.php:310
+#: ../ddirections.php:351
 msgid "Sorry, we're having trouble trying to determine your current location, please enter your address instead."
 msgstr "Lo sentimos, tenemos problemas para determinar tu posición actual. Por favor Introduce tu dirección."
 
-#: ../ddirections.php:311
+#: ../ddirections.php:352
 msgid "The position could not be determined due to"
 msgstr "No se puede determinar la posición a causa"
 
-#: ../ddirections.php:312
+#: ../ddirections.php:353
 msgid "an unknown error (Code: "
 msgstr "de un error desconocido (Código:"
 
-#: ../ddirections.php:358
+#: ../ddirections.php:407
 msgid "To start the route enter your initial location:"
 msgstr "Para planificar tu ruta introduce la dirección de origen:"
 
-#: ../ddirections.php:361
+#: ../ddirections.php:410
 msgid "Metric"
 msgstr "Métrica"
 
-#: ../ddirections.php:362
+#: ../ddirections.php:411
 msgid "Imperial"
 msgstr "Imperial"
 
-#: ../ddirections.php:364
-msgid "Get the rute"
+#: ../ddirections.php:413
+#, fuzzy
+msgid "Get the route"
 msgstr "Obtener indicaciones"
 
-#: ../ddirections.php:369
+#: ../ddirections.php:417
+msgid "You can also..."
+msgstr "También puedes..."
+
+#: ../ddirections.php:418
 msgid "Use my location"
 msgstr "Usar mi ubicacion actual"
+
+#: ../ddirections.php:488
+#: ../ddirections.php:511
+msgid "Enter your address:"
+msgstr "Introduce tu dirección:"
+
+#: ../ddirections.php:490
+msgid "Title"
+msgstr "Título"
+
+#: ../ddirections.php:490
+msgid "Enter the title for requesting an address"
+msgstr "Introduce el título para pedir que introduzcan una dirección"
+
+#: ../ddirections.php:491
+msgid "Page ID"
+msgstr "Id. de página/Slug/Nombre"
+
+#: ../ddirections.php:491
+msgid "Enter the page ID of the page you are showing the Driving Directions"
+msgstr "Introduce el identificador de la pággina donde estás mostrando Driving Directions"
 
 #: ../help.php:9
 msgid "<p>For more information visit the plugin's website: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
@@ -205,25 +231,8 @@ msgstr "Las <strong>direcciones</strong> están dentro de un div con id <em>#dir
 msgid "The <strong>map</strong> is inside a div with <em>#map-container</em> id."
 msgstr "El <strong>mapa</strong> está dentro de un div con id <em>#map-container</em>."
 
-#~ msgid "Title"
-#~ msgstr "Título"
-
-#~ msgid "Enter the title for requesting an address"
-#~ msgstr "Introduce el título para pedir que introduzcan una dirección"
-
-#~ msgid "Page ID"
-#~ msgstr "Id. de página/Slug/Nombre"
-
 #~ msgid "Take me to the place"
 #~ msgstr "Llévame hasta aquí"
-
-#~ msgid "Enter the page ID of the page you are showing the Driving Directions"
-#~ msgstr ""
-#~ "Introduce el identificador de la pággina donde estás mostrando Driving "
-#~ "Directions"
-
-#~ msgid "Enter your address:"
-#~ msgstr "Introduce tu dirección:"
 
 #~ msgid "In english."
 #~ msgstr "En español."

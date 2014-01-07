@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddirections\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-11 15:37+0100\n"
-"PO-Revision-Date: 2013-10-11 15:37+0100\n"
+"POT-Creation-Date: 2014-01-07 10:12+0100\n"
+"PO-Revision-Date: 2014-01-07 10:14+0100\n"
 "Last-Translator: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "Language-Team: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,136 +17,161 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../ddirections.php:165
+#: ../ddirections.php:202
 msgid "Fill the fields to configure the plugin."
 msgstr "Omple el camps per configurar el plugin"
 
-#: ../ddirections.php:178
-#: ../ddirections.php:359
+#: ../ddirections.php:215
+#: ../ddirections.php:408
 msgid "Address"
 msgstr "Direcció"
 
-#: ../ddirections.php:178
-#, fuzzy
+#: ../ddirections.php:215
 msgid "City names or the 41.39, 2.16 format"
-msgstr "Pots utilitzar noms de ciutats o el format de corrdenades 41.39, 2.16"
+msgstr "Pots utilitzar noms de ciutats o el format de coordenades 41.39, 2.16"
 
-#: ../ddirections.php:186
+#: ../ddirections.php:223
 msgid "Infobox text"
 msgstr "Text del quadre informatiu"
 
-#: ../ddirections.php:186
+#: ../ddirections.php:223
 msgid "Accepts some HTML tags"
 msgstr "Accepta alguns tags HTML"
 
-#: ../ddirections.php:194
+#: ../ddirections.php:231
 msgid "Zoom level"
 msgstr "Nivell de Zoom"
 
-#: ../ddirections.php:202
+#: ../ddirections.php:239
 msgid "Map type"
 msgstr "Tipus de Mapa"
 
-#: ../ddirections.php:205
+#: ../ddirections.php:242
 msgid "Hybrid"
 msgstr "Híbrid"
 
-#: ../ddirections.php:206
+#: ../ddirections.php:243
 msgid "Roadmap"
 msgstr "Normal"
 
-#: ../ddirections.php:207
+#: ../ddirections.php:244
 msgid "Satellite"
 msgstr "Satel·lit"
 
-#: ../ddirections.php:208
+#: ../ddirections.php:245
 msgid "Terrain"
 msgstr "Terreny"
 
-#: ../ddirections.php:210
+#: ../ddirections.php:247
 msgid "The 4 google maps different types"
 msgstr "Els 4 tipus diferents de mapa de Google Maps"
 
-#: ../ddirections.php:216
+#: ../ddirections.php:253
 #, fuzzy
 msgid "Icon marker"
 msgstr "URL del l'icona marcador"
 
-#: ../ddirections.php:228
+#: ../ddirections.php:266
 msgid "Scroll on instruction click?"
-msgstr ""
+msgstr "Scroll al fer click sobre les instruccions?"
 
-#: ../ddirections.php:244
+#: ../ddirections.php:283
 msgid "Save Changes"
 msgstr "Guardar canvis"
 
-#: ../ddirections.php:266
+#: ../ddirections.php:305
 msgid "Settings"
 msgstr "Configuració"
 
-#: ../ddirections.php:302
+#: ../ddirections.php:343
 msgid "Thanks!<br /> You are at <strong> "
 msgstr "Gràcies!<br /> Estas a <strong> "
 
-#: ../ddirections.php:303
+#: ../ddirections.php:344
 msgid "</strong> from us.<br />The driving directions are below the map."
 msgstr "</strong> de nosaltres.<br />Les direccions de conducció estàn sota el mapa."
 
-#: ../ddirections.php:304
+#: ../ddirections.php:345
 msgid "Open in Google Maps"
 msgstr "Obrir a Google Maps"
 
-#: ../ddirections.php:305
+#: ../ddirections.php:346
 msgid "Sorry, we can't provide directions to that address (you maybe too far away, are you in the same country as us?) Please try again."
 msgstr "Ho sentim, no podem donar-te direccions des d'aquesta adreça (potser estàs massa lluny, estàs al mateix pais que nosaltres?) Si us plau, torna-ho a intentar."
 
-#: ../ddirections.php:306
+#: ../ddirections.php:347
 msgid "Sorry we didn't understand the address you entered. Please try again."
 msgstr "Ho sentim, no podem entendre la direcció que has introduït. Si us plau, torna a intentar-ho."
 
-#: ../ddirections.php:307
+#: ../ddirections.php:348
 msgid "Sorry, there was a problem generating the directions. Please try again."
 msgstr "Ho sentim, hi ha hagut un problema generant les direccions. Si us plau, torna a intentar-ho."
 
-#: ../ddirections.php:308
+#: ../ddirections.php:349
 msgid "This website does not have permission to use the Geolocation API."
 msgstr "Aquesta pàgina web no te permís per fer servir l'API de Geolocalització."
 
-#: ../ddirections.php:309
+#: ../ddirections.php:350
 msgid "Sorry, your current position cannot be determined, please enter your address instead."
 msgstr "Ho sentim, no podem determinar la teva ubicació actual, escriu la teva adreça manualment."
 
-#: ../ddirections.php:310
+#: ../ddirections.php:351
 msgid "Sorry, we're having trouble trying to determine your current location, please enter your address instead."
 msgstr "Ho sentim, tenim problemes per determinar la teva localització. Si us plau, escriu la teva adreça."
 
-#: ../ddirections.php:311
+#: ../ddirections.php:352
 msgid "The position could not be determined due to"
 msgstr "No podem determinar la teva posició degut"
 
-#: ../ddirections.php:312
+#: ../ddirections.php:353
 msgid "an unknown error (Code: "
 msgstr "a un error desconegut (Còdi:"
 
-#: ../ddirections.php:358
+#: ../ddirections.php:407
 msgid "To start the route enter your initial location:"
 msgstr "Per començar la ruta introdueïx la teva posició inicial:"
 
-#: ../ddirections.php:361
+#: ../ddirections.php:410
 msgid "Metric"
 msgstr "Métrica"
 
-#: ../ddirections.php:362
+#: ../ddirections.php:411
 msgid "Imperial"
 msgstr "Imperial"
 
-#: ../ddirections.php:364
-msgid "Get the rute"
+#: ../ddirections.php:413
+#, fuzzy
+msgid "Get the route"
 msgstr "Obtenir indicacions"
 
-#: ../ddirections.php:369
+#: ../ddirections.php:417
+msgid "You can also..."
+msgstr "També pots..."
+
+#: ../ddirections.php:418
 msgid "Use my location"
 msgstr "Utilitzar la meva ubicació actual"
+
+#: ../ddirections.php:488
+#: ../ddirections.php:511
+msgid "Enter your address:"
+msgstr "Introdueix la teva adreça:"
+
+#: ../ddirections.php:490
+msgid "Title"
+msgstr "Títol"
+
+#: ../ddirections.php:490
+msgid "Enter the title for requesting an address"
+msgstr "Introdueix el títol per demanar una adreça"
+
+#: ../ddirections.php:491
+msgid "Page ID"
+msgstr "Identificador de pàgina/Slug/Nom"
+
+#: ../ddirections.php:491
+msgid "Enter the page ID of the page you are showing the Driving Directions"
+msgstr "Introdueix l'identificador de pàgina on estàs mostrant Driving Directions"
 
 #: ../help.php:9
 msgid "<p>For more information visit the plugin's website: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
@@ -163,7 +188,7 @@ msgstr "Per fer servir les \"driving directions\" has d'omplir els següents cam
 
 #: ../help.php:17
 msgid "Note that all shortcodes are required. You must use all of them on the same page or the plugin doesn't work."
-msgstr ""
+msgstr "Tingues en compte que tots els shortcodes son requerits. Has de fer-los servir tots a la mateixa pàgina o el plugin no funcionarà correctament."
 
 #: ../help.php:19
 msgid "Displays the map showing the chosen location. When the user asks for directions the route is shown in this map too."
@@ -204,22 +229,6 @@ msgstr "Les <strong>direccions</strong> estan dins d'un div amb id <em>#dir-cont
 #: ../help.php:36
 msgid "The <strong>map</strong> is inside a div with <em>#map-container</em> id."
 msgstr "El <strong>mapa</strong> está dins d'un div amb id <em>#map-container</em>."
-
-#~ msgid "Enter your address:"
-#~ msgstr "Introdueix la teva adreça:"
-
-#~ msgid "Title"
-#~ msgstr "Títol"
-
-#~ msgid "Enter the title for requesting an address"
-#~ msgstr "Introdueix el títol per demanar una adreça"
-
-#~ msgid "Page ID"
-#~ msgstr "Identificador de pàgina/Slug/Nom"
-
-#~ msgid "Enter the page ID of the page you are showing the Driving Directions"
-#~ msgstr ""
-#~ "Introdueix l'identificador de pàgina on estàs mostrant Driving Directions"
 
 #~ msgid "Take me to the place"
 #~ msgstr "Porta'm fins aquí"
