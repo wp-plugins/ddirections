@@ -3,7 +3,7 @@
 Plugin Name: DDirections
 Plugin URI: http://www.hectorgarrofe.com
 Description: Driving directions with geolocation and mobile support.
-Version: 1.4
+Version: 1.4.1
 Author: Hector Garrofe
 Author URI: http://www.hectorgarrofe.com
 */
