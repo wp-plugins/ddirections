@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ddirections\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-07 10:11+0100\n"
-"PO-Revision-Date: 2014-01-07 10:12+0100\n"
+"PO-Revision-Date: 2014-01-07 13:13+0100\n"
 "Last-Translator: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "Language-Team: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,6 @@ msgid "Address"
 msgstr "Dirección"
 
 #: ../ddirections.php:215
-#, fuzzy
 msgid "City names or the 41.39, 2.16 format"
 msgstr "Puedes usar nombres de ciudad o el formato de coordenadas 41.39, 2.16"
 
@@ -68,7 +67,6 @@ msgid "The 4 google maps different types"
 msgstr "Los 4 tipos de mapa de google maps"
 
 #: ../ddirections.php:253
-#, fuzzy
 msgid "Icon marker"
 msgstr "URL del icono marcador"
 
@@ -141,7 +139,6 @@ msgid "Imperial"
 msgstr "Imperial"
 
 #: ../ddirections.php:413
-#, fuzzy
 msgid "Get the route"
 msgstr "Obtener indicaciones"
 
