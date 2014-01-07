@@ -157,27 +157,6 @@ function posk_render_form() {
 		margin-left: 10px;
 		margin-top: 20px;
 	}
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	hr{
 		border-bottom: 1px;
@@ -293,8 +272,8 @@ function posk_render_form() {
 // Sanitize and validate input. Accepts an array, return a sanitized array.
 function posk_validate_options($input) {
 	 // strip html from textboxes
-	$input['textarea_one'] =  wp_filter_nohtml_kses($input['textarea_one']); // Sanitize textarea input (strip html tags, and escape characters)
-	$input['txt_one'] =  wp_filter_nohtml_kses($input['txt_one']); // Sanitize textbox input (strip html tags, and escape characters)
+	$input['textarea_one'] = wp_filter_nohtml_kses($input['textarea_one']); // Sanitize textarea input (strip html tags, and escape characters)
+	$input['txt_one'] = wp_filter_nohtml_kses($input['txt_one']); // Sanitize textbox input (strip html tags, and escape characters)
 	return $input;
 }
 
@@ -332,12 +311,42 @@ function wpmap_map($atts, $content = null){
 		), $atts));
 
 	$options = get_option('posk_options');    
-	if(empty($controls)) $controls = $options['controls'];
-    if(empty($zoom)) $zoom = $options['zoom'];
-    if(empty($initial_map_type)) $initial_map_type = $options['initial_map_type'];
-    if(empty($infobox_text)) $infobox_text = $options['infobox_text'];
-	if(empty($icon_url)) $icon_url = $options['icon_url'];
-	if(empty($scrolltop)) $scrolltop = $options['scrolltop'];
+	
+	if(isset($controls)){
+		$controls = $options['controls'];
+	} else {
+		$controlls = "";
+	}
+
+	if(isset($zoom)){
+		$zoom = $options['zoom'];
+	} else {
+		$zoom = "";
+	}
+	
+	if(isset($initial_map_type)){
+		$initial_map_type = $options['initial_map_type'];
+	} else {
+		$initial_map_type = "";
+	}
+	
+	if(isset($infobox_text)){
+		$infobox_text = $options['infobox_text'];
+	} else {
+		$infobox_text = "";
+	}
+	
+	if(isset($icon_url)){
+		$icon_url = $options['icon_url'];
+	} else {
+		$icon_url = "";
+	}
+
+	if(isset($scrolltop)){
+		$scrolltop = $options['scrolltop'];
+	} else {
+		$scrolltop = "";
+	}
 	
 	// set message variables to translate the JS
 	$msg_ok1 = __('Thanks!<br /> You are at <strong> ','ddirections');
@@ -351,6 +360,13 @@ function wpmap_map($atts, $content = null){
 	$msg_error3 = __('Sorry, we\'re having trouble trying to determine your current location, please enter your address instead.','ddirections');
 	$msg_error4_1 = __('The position could not be determined due to','ddirections');
 	$msg_error4_2 = __('an unknown error (Code: ','ddirections');
+	
+	
+	if(isset($_REQUEST['ddirections_widget_address'])){
+		$dd_address = $_REQUEST['ddirections_widget_address'];
+	} else {
+		$dd_address = null;
+	}
 	
 	// select which variables share between php and javascript
 	$variables_mapa = array(
@@ -369,8 +385,7 @@ function wpmap_map($atts, $content = null){
 		'msg_error3' => $msg_error3,
 		'msg_error4_1' => $msg_error4_1,
 		'msg_error4_2' => $msg_error4_2,
-		'ddirections_widget_address' => $_REQUEST['ddirections_widget_address']
-
+		'ddirections_widget_address' => $dd_address
     );
 
 	// send viariable to javascript
