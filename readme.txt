@@ -39,7 +39,7 @@ The plugin need you to use all the shortcodes to work properly.
 == Changelog ==
 
 = 1.4.1 =
-* Fixed spelling mistakes and better translations.
+* Fixed spelling mistakes and better translations. Thanks to jeffreytp and Josh for reporting.
 
 = 1.4 =
 * Added new Widget. You have to use the shortcodes on the landing page to get DDirections working.
