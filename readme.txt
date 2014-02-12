@@ -2,8 +2,8 @@
 Contributors: hectorgarrofe
 Tags: driving, directions, google, maps
 Requires at least: 3.3
-Tested up to: 3.7
-Stable tag: 1.4.1
+Tested up to: 3.8.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Make sure to read the plugin's documentation on the HELP tab. Upper right on the
 The plugin need you to use all the shortcodes to work properly.
 
 == Changelog ==
+
+= 1.4.2 =
+* Added basic translations in the front end area for Dutch, German, French and Russian.
 
 = 1.4.1 =
 * Fixed spelling mistakes and better translations. Thanks to jeffreytp and Josh for reporting.
