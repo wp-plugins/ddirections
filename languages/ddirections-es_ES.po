@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: ddirections\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-07 10:11+0100\n"
-"PO-Revision-Date: 2014-01-07 13:13+0100\n"
+"PO-Revision-Date: 2014-02-13 10:14+0100\n"
 "Last-Translator: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "Language-Team: Héctor Garrofé <info@hectorgarrofe.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es_ES\n"
-"X-Generator: Poedit 1.5.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
@@ -21,8 +21,7 @@ msgstr ""
 msgid "Fill the fields to configure the plugin."
 msgstr "Rellena los campos para configurar el plugin"
 
-#: ../ddirections.php:215
-#: ../ddirections.php:408
+#: ../ddirections.php:215 ../ddirections.php:408
 msgid "Address"
 msgstr "Dirección"
 
@@ -88,35 +87,55 @@ msgstr "¡Gracias!<br /> Estás a <strong>"
 
 #: ../ddirections.php:344
 msgid "</strong> from us.<br />The driving directions are below the map."
-msgstr "</strong> de nosotros.<br />Las instrucciones de conducción están bajo el mapa."
+msgstr ""
+"</strong> de nosotros.<br />Las instrucciones de conducción están bajo el "
+"mapa."
 
 #: ../ddirections.php:345
 msgid "Open in Google Maps"
 msgstr "Abrir en Google Maps"
 
 #: ../ddirections.php:346
-msgid "Sorry, we can't provide directions to that address (you maybe too far away, are you in the same country as us?) Please try again."
-msgstr "Lo sentimos, no podemos proporcionar direcciones para esta dirección (puede ser que estés demasiado lejos, ¿estás en el mismo país que nosotros?). Por favor, intentalo más tarde."
+msgid ""
+"Sorry, we can't provide directions to that address (you maybe too far away, "
+"are you in the same country as us?) Please try again."
+msgstr ""
+"Lo sentimos, no podemos proporcionar direcciones para esta dirección (puede "
+"ser que estés demasiado lejos, ¿estás en el mismo país que nosotros?). Por "
+"favor, intentalo más tarde."
 
 #: ../ddirections.php:347
 msgid "Sorry we didn't understand the address you entered. Please try again."
-msgstr "Lo sentimos, no entendemos la dirección introducida. Por favor, vuelve a intentarlo."
+msgstr ""
+"Lo sentimos, no entendemos la dirección introducida. Por favor, vuelve a "
+"intentarlo."
 
 #: ../ddirections.php:348
 msgid "Sorry, there was a problem generating the directions. Please try again."
-msgstr "Lo sentimos, ha ocurrido un error generando las direcciones. Por favor, vuelve a intentarlo."
+msgstr ""
+"Lo sentimos, ha ocurrido un error generando las direcciones. Por favor, "
+"vuelve a intentarlo."
 
 #: ../ddirections.php:349
 msgid "This website does not have permission to use the Geolocation API."
-msgstr "Esta página web no tiene permisos para utilizar la API de Geolocalización"
+msgstr ""
+"Esta página web no tiene permisos para utilizar la API de Geolocalización"
 
 #: ../ddirections.php:350
-msgid "Sorry, your current position cannot be determined, please enter your address instead."
-msgstr "Lo sentimos, no se puede determinar tu posición actual. Por favor, introduce tu dirección."
+msgid ""
+"Sorry, your current position cannot be determined, please enter your address "
+"instead."
+msgstr ""
+"Lo sentimos, no se puede determinar tu posición actual. Por favor, introduce "
+"tu dirección."
 
 #: ../ddirections.php:351
-msgid "Sorry, we're having trouble trying to determine your current location, please enter your address instead."
-msgstr "Lo sentimos, tenemos problemas para determinar tu posición actual. Por favor Introduce tu dirección."
+msgid ""
+"Sorry, we're having trouble trying to determine your current location, "
+"please enter your address instead."
+msgstr ""
+"Lo sentimos, tenemos problemas para determinar tu posición actual. Por favor "
+"Introduce tu dirección."
 
 #: ../ddirections.php:352
 msgid "The position could not be determined due to"
@@ -150,8 +169,7 @@ msgstr "También puedes..."
 msgid "Use my location"
 msgstr "Usar mi ubicacion actual"
 
-#: ../ddirections.php:488
-#: ../ddirections.php:511
+#: ../ddirections.php:488 ../ddirections.php:511
 msgid "Enter your address:"
 msgstr "Introduce tu dirección:"
 
@@ -169,28 +187,47 @@ msgstr "Id. de página/Slug/Nombre"
 
 #: ../ddirections.php:491
 msgid "Enter the page ID of the page you are showing the Driving Directions"
-msgstr "Introduce el identificador de la pággina donde estás mostrando Driving Directions"
+msgstr ""
+"Introduce el identificador de la pággina donde estás mostrando Driving "
+"Directions"
 
 #: ../help.php:9
-msgid "<p>For more information visit the plugin's website: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
-msgstr "<p>Para más información visita la web del plugin: <a href=\"http://www.hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
+msgid ""
+"<p>For more information visit the plugin's website: <a href=\"http://www."
+"hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
+msgstr ""
+"<p>Para más información visita la web del plugin: <a href=\"http://www."
+"hectorgarrofe.com\" target=\"_blank\">DDirections</a></p>"
 
-#: ../help.php:13
-#: ../help.php:15
+#: ../help.php:13 ../help.php:15
 msgid "How to use it?"
 msgstr "¿ Cómo utilizarlo ?"
 
 #: ../help.php:16
-msgid "To use driving directions you have to fill the fields below.<br />Once this is done, you can output the data in the front end with 3 different shortcodes."
-msgstr "Para usar las dirreciones de conducción has de rellenar los campos de abajo.<br />Una vez llenos, puedes mostrarlos en la parte pública de la web con 3 shortcodes diferentes."
+msgid ""
+"To use driving directions you have to fill the fields below.<br />Once this "
+"is done, you can output the data in the front end with 3 different "
+"shortcodes."
+msgstr ""
+"Para usar las dirreciones de conducción has de rellenar los campos de abajo."
+"<br />Una vez llenos, puedes mostrarlos en la parte pública de la web con 3 "
+"shortcodes diferentes."
 
 #: ../help.php:17
-msgid "Note that all shortcodes are required. You must use all of them on the same page or the plugin doesn't work."
-msgstr "Nótese que todos los shortcodes son requeridos. Se han de utilizar todos en la misma página o el plugin no funcionará. "
+msgid ""
+"Note that all shortcodes are required. You must use all of them on the same "
+"page or the plugin doesn't work."
+msgstr ""
+"Nótese que todos los shortcodes son requeridos. Se han de utilizar todos en "
+"la misma página o el plugin no funcionará. "
 
 #: ../help.php:19
-msgid "Displays the map showing the chosen location. When the user asks for directions the route is shown in this map too."
-msgstr "Muestra el mapa con la localización escogida. También muestra la ruta en el mapa cuando el usuario pregunta una dirección."
+msgid ""
+"Displays the map showing the chosen location. When the user asks for "
+"directions the route is shown in this map too."
+msgstr ""
+"Muestra el mapa con la localización escogida. También muestra la ruta en el "
+"mapa cuando el usuario pregunta una dirección."
 
 #: ../help.php:21
 msgid "Displays the form to interact with the map."
@@ -210,23 +247,36 @@ msgstr "Estilar el formulario"
 
 #: ../help.php:32
 msgid "You can style the form elements as you want using the classes below:"
-msgstr "Puedes estilar los elementos del formulario utilizando las siguientes clases:"
+msgstr ""
+"Puedes estilar los elementos del formulario utilizando las siguientes clases:"
 
 #: ../help.php:33
 msgid "The <strong>form</strong> is inside a div with <em>#directions</em> id."
-msgstr "El <strong>formulario</strong> está dentro de un div con el id <em>#directions</em>."
+msgstr ""
+"El <strong>formulario</strong> está dentro de un div con el id "
+"<em>#directions</em>."
 
 #: ../help.php:34
-msgid "The <strong>buttons</strong> of the form has the <em>.map-button</em> class."
-msgstr "Los <strong>botones</strong> del formuario tienen la clase <em>.map-button</em>."
+msgid ""
+"The <strong>buttons</strong> of the form has the <em>.map-button</em> class."
+msgstr ""
+"Los <strong>botones</strong> del formuario tienen la clase <em>.map-button</"
+"em>."
 
 #: ../help.php:35
-msgid "The <strong>directions</strong> are inside a div with <em>#dir-container</em> id."
-msgstr "Las <strong>direcciones</strong> están dentro de un div con id <em>#dir-container</em>."
+msgid ""
+"The <strong>directions</strong> are inside a div with <em>#dir-container</"
+"em> id."
+msgstr ""
+"Las <strong>direcciones</strong> están dentro de un div con id <em>#dir-"
+"container</em>."
 
 #: ../help.php:36
-msgid "The <strong>map</strong> is inside a div with <em>#map-container</em> id."
-msgstr "El <strong>mapa</strong> está dentro de un div con id <em>#map-container</em>."
+msgid ""
+"The <strong>map</strong> is inside a div with <em>#map-container</em> id."
+msgstr ""
+"El <strong>mapa</strong> está dentro de un div con id <em>#map-container</"
+"em>."
 
 #~ msgid "Take me to the place"
 #~ msgstr "Llévame hasta aquí"
